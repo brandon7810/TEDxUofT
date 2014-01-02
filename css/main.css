@@ -1,0 +1,208 @@
+/* General Resets */
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../fonts/helveticaneue-light.eot');
+    src: url('../fonts/helveticaneue-light.eot') format('embedded-opentype'),
+         url('../fonts/helveticaneue-light.woff') format('woff'),
+         url('../fonts/helveticaneue-light.ttf') format('truetype'),
+         url('../fonts/helveticaneue-light.svg#HelveticaNeueLight') format('svg');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* General button style (reset) */
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: #A8A8A8;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'HelveticaNeueLight', Calibri, Arial, sans-serif;
+    color: #333;
+    background: #FFF;
+    overflow: hidden;
+}
+
+.pt-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.pt-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.pt-page-current, .no-js .pt-page {
+    visibility: visible;
+    z-index: 1;
+}
+
+.no-js body {
+    overflow: auto;
+}
+
+.pt-trigger-container {
+    position: absolute;
+    width: 135px;
+    z-index: 999999;
+    margin-top: 16%;
+}
+
+.pt-trigger {
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 20px 0 50px;
+    line-height: 35px;
+    height: 35px;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    outline: none;
+    background: rgba(0,0,0,0);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* On hover */
+.pt-trigger:after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #FF2B06;
+}
+
+.pt-trigger:hover,
+.pt-trigger:active {
+    color: #FFF;
+}
+
+.pt-trigger:hover:after,
+.pt-trigger:active:after {
+    width: 100%;
+}
+
+/* Current Page */
+.on-page {
+    background: #FF2B06;
+    color: #FFF;
+}
+
+/* Page Styles */
+.pt-page-ontop {
+    z-index: 999;
+}
+
+.pt-page h1 {
+    position: absolute;
+    font-weight: 300;
+    font-size: 4.4em;
+    line-height: 1;
+    letter-spacing: 6px;
+    margin: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    word-spacing: -0.3em;
+}
+
+.pt-page-1 {
+    background: #FFF;
+    background-image: url("../img/TEDx_logo.png");
+    background-repeat: no-repeat;
+    background-position: 90% 39%;
+}
+
+.pt-page-2 {
+    background: #FFF;
+}
+
+.pt-page-3 {
+    background: #FFF;
+}
+
+.pt-page-4 {
+    background: #FFF;
+}
+
+.pt-page-5 {
+    background: #FFF;
+}
+
+.pt-page-6 {
+    background: #FFF;
+}
+
+/*No Animation Support Message Style*/
+.pt-message {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #da475c;
+    color: #333;
+    text-align: center;
+}
+
+.pt-message p {
+    margin: 0;
+    line-height: 60px;
+    font-size: 26px;
+}
+
+.no-cssanimations .pt-message {
+    display: block;
+}
