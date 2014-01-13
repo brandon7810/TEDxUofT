@@ -64,26 +64,6 @@ function go() {
   $('#tf1').textFX("DIMENSIONS", {
     delay: 0
   });
-  // $('#tf2').textFX("Lorizzle ipsizzle dolizzle sit amizzle, sure adipiscing elizzle.", {
-  //   delay: 1000
-  // });
-  // $('#tf3').textFX("Nullizzle sapizzle velizzle, i'm in the shizzle volutpizzle.", {
-  //   delay: 1500
-  // });
-  // $('#tf4').textFX("Check out this yo mamma dolizzle dapibizzle hizzle tempizzle fizzle.", {
-  //   delay: 1800
-  // });
-  // $('#tf5').textFX("Cool eleifend boofron phat. Bow wow wow dapibizzle.", {
-  //   delay: 2000
-  // });
-  // $('#tf6').textFX("Bizzle suscipizzle. Integer semper fo shizzle sizzle purus.", {
-  //   delay: 2200
-  // });
 };
-
-$('#btn').click(function () {
-  go();
-  return false;
-});
 
 go();
