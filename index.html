@@ -85,6 +85,7 @@
         </div>
         <h1>Partners</h1>
     </div>
+	
     <div class="pt-page pt-page-6">
         <div class="pt-trigger-container">
             <button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
@@ -110,8 +111,6 @@
 					
 					<label for="Message">Message:</label><br />
 					<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
-					
-					
 				</form>
 				
 	
@@ -158,7 +157,77 @@
             <button class="btn pt-trigger" data-animation="4" data-goto="6">Contact</button>
             <button class="btn pt-trigger on-page" data-animation="3" data-goto="7">Apply</button>
         </div>
-		<h1>Apply</h1>
+		
+        <div id="apply-page-wrap">
+
+			<div id="apply-area">
+				<h2>Apply</h2>
+
+				<form id="applyform">
+					<label for="Name">Name:</label>
+					<input type="text" name="Name" id="applyName" />
+					
+					<label for="Email">Email:</label>
+					<input type="text" name="Email" id="applyEmail" />
+					
+					<label for="Phone">Phone:</label>
+					<input type="text" name="Phone" id="Phone" />
+					
+					<label for="Occupation">Occupation:</label>
+					<input type="text" name="Occupation" id="Occupation" />
+
+					<label for="Campus">Campus (if applicable):</label>
+					<input type="text" name="Campus" id="Campus" />
+				
+					<label for="College">Affiliated College at UTSG:</label>
+					<input type="text" name="College" id="College" />
+				
+					<label for="Dietary-res">Dietary restrictions:</label><br />
+					<input type="text" name="Dietary-res" id="Dietary_res" />
+					
+					<p>Tell us a little bit about yourself. (max 200 words)
+					What brings you to this TEDx event? (max 200 words) 
+					Have you ever attended or helped organize a TEDx event? If so, which ones? (max 100 words)
+					Is there anything more about you that you would like to add? (max 100 words)</p>
+					
+					<label for="Message">Message:</label><br />
+					<textarea name="Message" rows="20" cols="20" id="applyMessage"></textarea>
+				</form>
+				
+				<div id="ApplySubmit" class="submit-button" style="float: right; cursor: pointer; cursor: hand; border: 2px solid #ccc; padding: 5px;">Submit</div> 
+				<script>
+					$('#ApplySubmit').click(function(){
+						var name = $('#applyName').val();
+						var email = $('#applyEmail').val();
+						var phone = $('#Phone').val();
+						var occupation = $('#Occupation').val();
+						var campus = $('#Campus').val();
+						var college = $('#College').val();
+						var dietary_res = $('#Dietary_res').val();
+						var message = $('#applyMessage').val();
+						
+						if( name.length==0 || email.length==0 || phone.length==0 || message.length==0){
+							alert("Sorry! Please complete important blanks (name, email, phone, message)");
+						}else if (email.indexOf("@") == -1){
+							alert("Sorry! You've entered invalid an email!");
+						}else if (message.length <= 35){
+							alert("Sorry! Your message was too short!");
+						}else{
+							alert("Thanks! Your message has been submitted!");
+							
+							$.post( "applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, College: college, 
+							Dietary_res: dietary_res, Message: message } );
+							
+							$(':input','#applyform')
+							  .not(':button, :submit, :reset, :hidden')
+							  .val('');\
+						}
+					});
+				</script>
+			
+			</div>
+			
+		</div>
     </div>
     
 

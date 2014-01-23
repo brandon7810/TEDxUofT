@@ -227,27 +227,28 @@ body {
 /*Contact Page*/
 
 
+
 #contact-page-wrap {
 
-	width: 660px;
+	width: 900px;
 	background: white;
-	padding: 20px 50px 20px 50px;
-	margin: 130px auto;
+	padding: 20px 30px 20px 50px;
+	margin: 150px auto;
 	height: auto !important;
-	height: 400px;
+	height: 550px;
 }
 
 #contact-area {
-	width: 600px;
-	margin-top: 25px;
+	width: 700px;
+	margin-top: 50px;
 }
 
 #contact-area input, #contact-area textarea {
 	padding: 5px;
-	width: 471px;
+	width: 401px;
 	font-family: Helvetica, sans-serif;
 	font-size: 1.4em;
-	margin: 0px 0px 10px 0px;
+	margin: 5px 0px 10px 0px;
 	border: 2px solid #ccc;
 }
 
@@ -264,11 +265,61 @@ body {
 	float: right;
 }
 
-label {
+#contact-area label {
 	float: left;
 	text-align: right;
-	margin-right: 15px;
-	width: 100px;
+	margin-right: 20px;
+	width: 150px;
 	padding-top: 5px;
+	font-size: 1.1em;
+}
+
+
+/*Apply Page*/
+
+
+#apply-page-wrap {
+
+	width: 900px;
+	background: white;
+	padding: 20px 30px 20px 50px;
+	margin: 0px auto;
+	height: auto !important;
+	height: 550px;
+}
+
+#apply-area {
+	width: 700px;
+	margin-top: 0px;
+}
+
+#apply-area input, #apply-area textarea {
+	padding: 5px;
+	width: 401px;
+	font-family: Helvetica, sans-serif;
 	font-size: 1.4em;
+	margin: 5px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#apply-area textarea {
+	height: 70px;
+}
+
+#apply-area textarea:focus, #apply-area input:focus {
+	border: 2px solid #900;
+}
+
+#apply-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+#apply-area label {
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	width: 150px;
+	padding-top: 5px;
+	font-size: 1.1em;
 }
