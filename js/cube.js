@@ -6,6 +6,8 @@ var checker = 1;
 var counter = 0;
 var formation = ["mix","line","circle","cube","spiral"]
 
+
+
 init();
 animate();
 window.setInterval(function(){
@@ -26,8 +28,11 @@ function init(){
 	scene = new THREE.Scene();
 
 	var geometry = new THREE.CubeGeometry(10,10,10);
-
-	for(var i = 0;i < 125;i++){
+	
+	var window_width = $(window).width();	
+	var num_cubes = Math.floor(window_width/1600*110);
+	
+	for(var i = 0;i < num_cubes;i++){
 
 		var material = new THREE.MeshBasicMaterial({
 			color : 0xFF2B06,
