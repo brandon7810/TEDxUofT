@@ -225,6 +225,7 @@ p {
 }
 
 
+
 /*About Page*/
 
 .pt-page-2 {
@@ -233,6 +234,13 @@ p {
 
 .pt-page-3 {
     background: #FFF;
+}
+
+.about_img {
+		position:fixed;
+		width:116%;
+		bottom:-35%;
+		left:-10%;
 }
 
 .description-ted {	
@@ -273,9 +281,7 @@ p {
 		opacity:.8;
 }
 
-
-
-
+/*End of About*/
 
 
 
@@ -317,12 +323,19 @@ p {
     display: block;
 }
 
+
+
+
 /*Contact Page*/
 
-
+.contact_img {
+	position:fixed;
+	top:-38%;
+	width:116%;
+	left:-10%;
+}
 
 #contact-page-wrap {
-
 	width: 900px;
 	background: white;
 	padding: 20px 30px 20px 50px;
