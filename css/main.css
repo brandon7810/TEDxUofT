@@ -167,13 +167,13 @@ body {
     right: 109px;
     width: 300px;
     height: 85px;
-    top: 215px;
+    top: 19%;
 }
 .theme-description {
     position: fixed;
 		right:65px;
 		width:342px;
-    margin-top: 250px;	
+    margin-top: 13%;	
 }
 .theme-description-title {
     margin: 40px 0 5px;		
