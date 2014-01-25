@@ -52,6 +52,12 @@ body {
     overflow: hidden;
 }
 
+p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 0
+}
+
 .pt-wrapper {
     position: relative;
     width: 100%;
@@ -155,6 +161,16 @@ body {
     width: 100%;
     text-align: center;
     word-spacing: -0.3em;
+}
+
+.page-container{
+    padding: 35px 100px 0 200px
+}
+
+.col-half{
+    width: 50%;
+    padding: 0 30px;
+    float: left;
 }
 
 /* Page 1 - Home */
