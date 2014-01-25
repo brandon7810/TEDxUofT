@@ -188,6 +188,9 @@ body {
 		bottom:0;
 		text-align:center;
 	width:100%;
+	color: grey;
+	font-size:90%;
+	opacity:.8;
 }
 
 .pt-page-2 {
