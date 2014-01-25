@@ -281,7 +281,7 @@
         <div id="apply-page-wrap">
 
 			<div id="apply-area">
-				<h2>Apply</h2>
+				<h2>I wish to apply!</h2>
 				<div class="content">
 					<script src="jquery.steps.js"></script>
 					<link rel="stylesheet" href="jquery.steps.css">
@@ -306,7 +306,7 @@
 										email = $('#applyEmail').val();
 										phone = $('#Phone').val();
 										if(name.length == 0 || email.length == 0 || phone.length ==0){
-											alert("Please complete all the blanks.");
+											alert("Oops! You missed a blank.");
 											return false;
 										}else{
 											return true;
@@ -317,7 +317,7 @@
 										occupation = $('#Occupation').val();
 										
 										if(occupation.length == 0){
-											alert("Please complete all the options.");
+											alert("Oops! You missed a step.");
 											return false;
 										}else{
 											return true;
@@ -342,7 +342,7 @@
 									//Fifth
 									}else if(currentIndex == 4){
 										if(!afterparty_yes_bool && !afterparty_no_bool){
-											alert("Please choose one option");
+											alert("Oops! You missed a step.");
 											return false;
 										}else{
 											return true;
@@ -411,23 +411,23 @@
 					<div id="wizard">
 						<h2>First Step</h2>
 						<section>
-							<label for="Name">Name:</label>
+							<label for="Name">Hi! My name is (Alexander The-Great)</label>
 							<input type="text" name="Name" id="applyName" />
 							
-							<label for="Email">Email:</label>
+							<label for="Email">and you can reach me at (thegreat@ruling.com)</label>
 							<input type="text" name="Email" id="applyEmail" />
 							
-							<label for="Phone">Phone:</label>
+							<label for="Phone">or at (123-456-7890)</label>
 							<input type="text" name="Phone" id="Phone" />
 						</section>
 
 
 						<h2>Second Step</h2>
 						<section>
-							<label for="Occupation">Occupation:</label>
+							<label for="Occupation">I work as a (King Emperor)</label>
 							<input type="text" name="Occupation" id="Occupation" />
 
-							<label for="Campus">Campus (if applicable):</label>
+							<label for="Campus">(if applicable) at this campus</label>
 							<div id="campus_choices">
 								<div id="campus_utm" style="cursor: pointer; cursor: hand;">UTM</div>
 								<div id="campus_utsg" style="cursor: pointer; cursor: hand;">UTSG</div>
@@ -437,28 +437,27 @@
 
 						<h2>Third Step</h2>
 						<section>
-							<p>Tell us a little bit about yourself. (max 200 words)
-							What brings you to this TEDx event? (max 200 words) 
-							Have you ever attended or helped organize a TEDx event? If so, which ones? (max 100 words)
-							Is there anything more about you that you would like to add? (max 100 words)</p>
-							<label for="Message">Message:</label><br />
+							<p>A bit about myself 
+							</p>
+							<label for="Message">What brings me to this TEDx event (max 200 words). Have I ever attended or helped organize a TEDx event? 
+								<br>(I love/play/do/care/am passionate)</label><br />
 							<textarea name="Message" rows="20" cols="40" id="applyMessage"></textarea>
 						</section>
 
 						<h2>Forth Step</h2>
 						<section>
-							<label for="Dietary-res">Dietary restrictions:</label><br />
+							<label for="Dietary-res">I love food but I am (allergic to water)</label><br />
 							<input type="text" name="Dietary-res" id="Dietary_res" />
-							<label for="Additional_info">Additional information about you:</label><br />
+							<label for="Additional_info">(Optional) Anything I would like to add </label><br />
 							<textarea name="Additional_info" rows="20" cols="40" id="additional_info"></textarea>
 						</section>
 						
 						<h2>Fifth Step</h2>
 						<section>
-							<label for="interst-afterparty-ticket">Would you be interested in buying a afterparty ticket?</label><br />
+							<label for="interst-afterparty-ticket">Great! Would I be interested in buying a afterparty ticket?</label><br />
 							<div id="afterparty_choices">
-								<div id="afterparty_yes" style="cursor: pointer; cursor: hand;">Yes</div>
-								<div id="afterparty_no" style="cursor: pointer; cursor: hand;">No</div>
+								<div id="afterparty_yes" style="cursor: pointer; cursor: hand;">Yes!</div>
+								<div id="afterparty_no" style="cursor: pointer; cursor: hand;">No.</div>
 							</div>
 						</section>
 						
