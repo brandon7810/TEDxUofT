@@ -229,6 +229,9 @@ p {
     background: #FFF;
 }
 
+.pt-page-7 {
+    background: #FFF;
+}
 /*No Animation Support Message Style*/
 .pt-message {
     display: none;
@@ -302,57 +305,12 @@ p {
 	font-size: 1.1em;
 }
 
-
-/*Apply Page*/
-
-
+/*Apply page*/
 #apply-page-wrap {
-
-	width: 900px;
-	background: white;
-	padding: 20px 30px 20px 50px;
-	margin: 0px auto;
-	height: auto !important;
-	height: 550px;
+	margin: 0% 10% 0% 10%;
 }
 
-#apply-area {
-	width: 700px;
-	margin-top: 0px;
-}
-
-#apply-area input, #apply-area textarea {
-	padding: 5px;
-	width: 401px;
-	font-family: Helvetica, sans-serif;
-	font-size: 1.4em;
-	margin: 5px 0px 10px 0px;
-	border: 2px solid #ccc;
-}
-
-#apply-area textarea {
-	height: 70px;
-}
-
-#apply-area textarea:focus, #apply-area input:focus {
-	border: 2px solid #900;
-}
-
-#apply-area input.submit-button {
-	width: 100px;
-	float: right;
-}
-
-#apply-area label {
-	float: left;
-	text-align: right;
-	margin-right: 20px;
-	width: 150px;
-	padding-top: 5px;
-	font-size: 1.1em;
-}
-
-/**/
+/*Speaker page*/
 
 #speaker-page-wrap {
 	margin: 100px 0px 0px 100px;
