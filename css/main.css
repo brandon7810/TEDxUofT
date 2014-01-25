@@ -118,6 +118,12 @@ p {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+		-webkit-border-top-right-radius: .2em;
+		-moz-border-top-right-radius: .2em;
+		border-top-right-radius: .2em;
+		-webkit-border-bottom-right-radius: .2em;
+		-moz-border-bottom-right-radius: .2em;
+		border-bottom-right-radius: .2em;
 }
 
 /* On hover */
@@ -127,16 +133,24 @@ p {
     top: 0;
     left: 0;
     background: #FF2B06;
+		-webkit-border-top-right-radius: .2em;
+		-moz-border-top-right-radius: .2em;
+		border-top-right-radius: .2em;
+		-webkit-border-bottom-right-radius: .2em;
+		-moz-border-bottom-right-radius: .2em;
+		border-bottom-right-radius: .2em;
 }
 
 .pt-trigger:hover,
 .pt-trigger:active {
     color: #FFF;
+	
 }
 
 .pt-trigger:hover:after,
 .pt-trigger:active:after {
     width: 100%;
+	
 }
 
 /* Current Page */
@@ -194,6 +208,7 @@ p {
 .theme-description-title {
     margin: 40px 0 5px;		
 }
+
 .theme-description-p {
     margin: 10px 0px 15px;
 		font-size:100%;
@@ -203,11 +218,14 @@ p {
 		position:fixed;
 		bottom:0;
 		text-align:center;
-	width:100%;
-	color: grey;
-	font-size:90%;
-	opacity:.8;
+		width:100%;
+		color: grey;
+		font-size:85%;
+		opacity:1;
 }
+
+
+/*About Page*/
 
 .pt-page-2 {
     background: #FFF;
@@ -216,6 +234,50 @@ p {
 .pt-page-3 {
     background: #FFF;
 }
+
+.description-ted {	
+		margin-top: 2%;
+}
+
+.description-ted-title {
+		font-size: 2.2em;
+}
+
+.description-ted-heading {
+		font-size:1.25em;
+}
+
+.description-ted-body {
+		opacity: .7;
+}
+
+.description-tedx {
+		margin-top: 13%;
+		
+}
+
+.description-tedx-title {
+		font-size: 2.2em;
+		font-weight:bolder;
+		color:#FF3B06;
+
+}
+
+.description-tedx-heading {
+		font-size:1.2em;
+		
+}
+
+.description-tedx-body {
+		font-size: 1.02em;
+		opacity:.8;
+}
+
+
+
+
+
+
 
 .pt-page-4 {
     background: #FFF;
