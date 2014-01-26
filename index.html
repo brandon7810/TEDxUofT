@@ -11,7 +11,8 @@
     
     <link rel="icon" type="image/ico" href="img/favicon.ico" />
 
-    <link rel="stylesheet" href="css/global.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/animation.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 </head>
@@ -31,26 +32,25 @@
             <!-- <button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button> -->
             <button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
             <button class="btn pt-trigger" data-animation="3" data-goto="7">Apply</button>
-       </div>
-        <div class="tedx-logo"></div>
-        <div class="theme-description">
-            <h2 id="tf1" class="theme-description-title">
-							DIMENSIONS
-						</h2>
-						<p class="theme-description-p">
-							An open ended and all encompassing theme that reflects the various fields of study of our speakers, the many skills and interests 							of 82,000 students at the University of Toronto’s three campuses, and the endless outcomes of ideas worth sharing.
-						</p >
-						<p class="theme-description-p">
-							In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events 								that bring people together to share a TED-like experience. 
-						</p>
-						<p class="theme-description-p">
-						On March 1st, 2014, we hope you join us in taking it to the next dimension.
-					</p>
+       	</div>
+       	<div class="tedx-logo"></div>
+       	<div class="theme-description">
+            <h2 class="theme-description-title">DIMENSIONS</h2>
+			<p class="theme-description-p">
+				An open ended and all encompassing theme that reflects the various fields of study of our speakers, the many skills and interests of 82,000 students at the University of Toronto’s three campuses, and the endless outcomes of ideas worth sharing.
+			</p >
+			<p class="theme-description-p">
+				In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. 
+			</p>
+			<p class="theme-description-p">
+				On March 1st, 2014, we hope you join us in taking it to the next dimension.
+			</p>
         </div>
-				<div class="theme-description-footer">
-					<p>This independent TEDx event is operated under license from TED.</p>
-				</div>
+		<div class="theme-description-footer">
+			<p>This independent TEDx event is operated under license from TED.</p>
+		</div>
     </div>
+
     <div class="pt-page pt-page-2">
         <div class="pt-trigger-container">
             <button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
@@ -63,6 +63,7 @@
         </div>
         <!-- <h1>News</h1> -->
     </div>
+
     <div class="pt-page pt-page-3">
         <div class="pt-trigger-container">
             <button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
@@ -75,7 +76,7 @@
         </div>
         <div class="page-container">
 	        <div class="col-half description-ted">
-						<img class="about_img" src="img/About_illustration.png">
+				<img class="about_img" src="img/About_illustration.png">
 	        	<h3 class="description-ted-title">About TED</h3>
 	        	<p class="description-ted-heading">
 	        		TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a conference in California 26 years ago, TED has grown to support those world-changing ideas with many initiatives.
@@ -87,14 +88,18 @@
 					On TED.com, talks from TED conferences are shared with the world for free as TED Talks videos. A new TED Talk is posted every weekday. Through the Open Translation Project, TED Talks are subtitled by volunteers worldwide into more than 90 languages. Through our distribution networks, TED Talks are shared on TV, radio, Netflix and many websites.
 				</p>
 	        </div>
+
 	        <div class="col-half description-tedx">
 	        	<h3 class="description-tedx-title">So what is TEDx?</h3>
 	        	<p class="description-tedx-heading">
 	        		In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. </p>
-						<p class="description-tedx-body">At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)</p>
+				<p class="description-tedx-body">
+					At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
+				</p>
 	        </div>
         </div>
     </div>
+
     <div class="pt-page pt-page-4">
         <div class="pt-trigger-container">
             <button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
@@ -195,6 +200,7 @@
 		
 		
     </div>
+
     <div class="pt-page pt-page-5">
         <div class="pt-trigger-container">
             <button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
@@ -235,39 +241,10 @@
 					<label for="Message">Message:</label><br />
 					<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
 				</form>
-				
 	
 				<div id="ContactSubmit" class="submit-button" style="float: right; cursor: pointer; cursor: hand; border: 2px solid #ccc; padding: 5px;">Submit</div> 
-				<script>
-					$('#ContactSubmit').click(function(){
-						var name = $('#Name').val();
-						var email = $('#Email').val();
-						var message = $('#Message').val();
-						
-						if( name.length==0 || message.length==0 || email.length==0){
-							alert("Sorry! Please complete all the blanks.");
-						}else if (email.indexOf("@") == -1){
-							alert("Sorry! You've entered invalid an email!");
-						}else if (message.length <= 5){
-							alert("Sorry! Your message was too short!");
-						}else{
-							alert("Thanks! Your message has been submitted!");
-							
-							$.post( "contactengine.php", { Name: name, Email: email, Message: message } );
-							
-							$(':input','#contactform')
-							  .not(':button, :submit, :reset, :hidden')
-							  .val('');
-							  
-							  
-						}
-						
-					});
-				</script>
 			</div>
-			
 		</div>
-		
 	</div>
 	
 	<div class="pt-page pt-page-7">
@@ -281,156 +258,30 @@
             <button class="btn pt-trigger on-page" data-animation="3" data-goto="7">Apply</button>
         </div>
 		
-        <div id="apply-page-wrap">
+        <div class="page-container">
 
 			<div id="apply-area">
-				<h2>I wish to apply!</h2>
 				<div class="content">
-					<script src="jquery.steps.js"></script>
-					<link rel="stylesheet" href="jquery.steps.css">
-					<script>
-						$(function ()
-						{	
-						
-							var name, email, phone, occupation, party_ticket, campus, message, additional_info, dietary_res;
-							
-							$("#wizard").steps({
-								headerTag: "h2",
-								bodyTag: "section",
-								transitionEffect: "slideLeft",
-
-								
-								//Events happen in different step
-								onStepChanging: function (event, currentIndex, priorIndex) { 
-								
-									//First step
-									if(currentIndex == 0){
-										name = $('#applyName').val();
-										email = $('#applyEmail').val();
-										phone = $('#Phone').val();
-										if(name.length == 0 || email.length == 0 || phone.length ==0){
-											alert("Oops! You missed a blank.");
-											return false;
-										}else{
-											return true;
-										}
-										
-									//Second step
-									}else if(currentIndex == 1){
-										occupation = $('#Occupation').val();
-										
-										if(occupation.length == 0){
-											alert("Oops! You missed a step.");
-											return false;
-										}else{
-											return true;
-										}
-										
-									//Third step
-									}else if(currentIndex == 2){
-										message = $('#applyMessage').val();
-										if (message.length <= 30){
-											alert("You message is too short.");
-											return false;
-										}else{
-											return true;
-										}
-									
-									//Fourth step
-									}else if(currentIndex == 3){
-										dietary_res = $('#Dietary_res').val();
-										additional_info = $('#additional_info').val();
-										return true;
-									
-									//Fifth
-									}else if(currentIndex == 4){
-										if(!afterparty_yes_bool && !afterparty_no_bool){
-											alert("Oops! You missed a step.");
-											return false;
-										}else{
-											return true;
-										}
-									}							
-									
-								},			
-								//Event happens when finishing all the steps
-								onFinished: function (event, currentIndex) {
-									alert("Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nOccupation: " + occupation + "\nMessage: " + message +
-									"\nDietary restrictions: " + dietary_res + "\nAddtional info: " + additional_info + "\nCampus: " + campus + "\nAfter Party: " + party_ticket);
-								}
-							});
-							
-							var utm_bool = false;
-							var utsc_bool = false;
-							var utsg_bool = false;
-							$("#campus_utm").click(function(event) {
-								campus = "UTM";
-								utm_bool = true;
-								$("#campus_utm").css('color','red');
-								utsc_bool = false;
-								$("#campus_utsg").css('color','black');
-								utsg_bool = false;
-								$("#campus_usc").css('color','black');
-							});
-							$("#campus_utsg").click(function(event) {
-								campus = "UTSG";
-								utm_bool = false;
-								$("#campus_utm").css('color','black');
-								utsc_bool = false;
-								$("#campus_utsc").css('color','black');
-								utsg_bool = true;
-								$("#campus_utsg").css('color','red');
-							});
-							$("#campus_utsc").click(function(event) {
-								campus = "UTSC";
-								utm_bool = false;
-								$("#campus_utm").css('color','black');
-								utsc_bool = true;
-								$("#campus_utsc").css('color','red');
-								utsg_bool = false;
-								$("#campus_utsg").css('color','black');
-							});
-							
-							var afterparty_yes_bool = false;
-							var afterparty_no_bool = false;
-							$("#afterparty_yes").click(function(event) {
-								party_ticket = "YES";
-								afterparty_yes_bool = true;
-								$("#afterparty_yes").css('color','red');
-								afterparty_no_bool = false;
-								$("#afterparty_no").css('color','black');
-							});
-							$("#afterparty_no").click(function(event) {
-								party_ticket = "NO";
-								afterparty_no_bool = true;
-								$("#afterparty_no").css('color','red');
-								afterparty_yes_bool = false;
-								$("#afterparty_yes").css('color','black');
-							});
-							
-						});
-					</script>  
-
 					<div id="wizard">
-						<h2>First Step</h2>
+						<h2>x</h2>
 						<section>
-							<label for="Name">Hi! My name is (Alexander The-Great)</label>
-							<input type="text" name="Name" id="applyName" />
+							<label for="Name">Hi! My name is</label>
+							<input type="text" name="Name" id="applyName" placeholder="Alexander The-Great"/>
 							
-							<label for="Email">and you can reach me at (thegreat@ruling.com)</label>
-							<input type="text" name="Email" id="applyEmail" />
+							<label for="Email">and you can reach me at </label>
+							<input type="text" name="Email" id="applyEmail" placeholder="thegreat@ruling.com"/>
 							
-							<label for="Phone">or at (123-456-7890)</label>
-							<input type="text" name="Phone" id="Phone" />
+							<label for="Phone">or at </label>
+							<input type="text" name="Phone" id="Phone" placeholder="123-456-7890"/>
 						</section>
 
 
-						<h2>Second Step</h2>
+						<h2>x</h2>
 						<section>
-							<label for="Occupation">I work as a (King Emperor)</label>
-							<input type="text" name="Occupation" id="Occupation" />
+							<label for="Occupation">I work as a </label>
+							<input type="text" name="Occupation" id="Occupation" placeholder="Slave Master"/>
 
-							<label for="Campus">(if applicable) at this campus</label>
+							<label for="Campus">at this campus</label>
 							<div id="campus_choices">
 								<div id="campus_utm" style="cursor: pointer; cursor: hand;">UTM</div>
 								<div id="campus_utsg" style="cursor: pointer; cursor: hand;">UTSG</div>
@@ -438,7 +289,7 @@
 							</div>
 						</section>
 
-						<h2>Third Step</h2>
+						<h2>x</h2>
 						<section>
 							<p>A bit about myself 
 							</p>
@@ -447,7 +298,7 @@
 							<textarea name="Message" rows="20" cols="40" id="applyMessage"></textarea>
 						</section>
 
-						<h2>Forth Step</h2>
+						<h2>x</h2>
 						<section>
 							<label for="Dietary-res">Before I go, I love food but I am (allergic to water)</label><br />
 							<input type="text" name="Dietary-res" id="Dietary_res" />
@@ -455,7 +306,7 @@
 							<textarea name="Additional_info" rows="20" cols="40" id="additional_info"></textarea>
 						</section>
 						
-						<h2>Fifth Step</h2>
+						<h2>x</h2>
 						<section>
 							<label for="interst-afterparty-ticket">Great! Would I be interested in buying a afterparty ticket?</label><br />
 							<div id="afterparty_choices">
@@ -483,6 +334,7 @@
 <script src="js/build/tween.min.js"></script>
 <script src="js/build/cube.min.js"></script>
 <script src="js/main.js"></script>
+<script src="jquery.steps.js"></script>
 <!--jQuery.js is on the top -->
 
 </body>

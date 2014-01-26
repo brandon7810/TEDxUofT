@@ -1695,7 +1695,7 @@ var defaults = $.fn.steps.defaults = {
      * @default "<span class=\"number\">#index#.</span> #title#"
      * @for defaults
      **/
-    titleTemplate: "<span class=\"number\">#index#.</span> #title#",
+    titleTemplate: "<span class=\"number\"></span> #title#",
 
     /**
      * The loading template which will be used to create the loading animation.
@@ -1952,7 +1952,7 @@ var defaults = $.fn.steps.defaults = {
          * @default "Next"
          * @for defaults
          **/
-        next: "Next",
+        next: "Continue",
 
         /**
          * Label for the previous button.
