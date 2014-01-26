@@ -283,35 +283,35 @@
 
 							<label for="Campus">at this campus</label>
 							<div id="campus_choices">
-								<div id="campus_utm" style="cursor: pointer; cursor: hand;">UTM</div>
-								<div id="campus_utsg" style="cursor: pointer; cursor: hand;">UTSG</div>
-								<div id="campus_utsc" style="cursor: pointer; cursor: hand;">UTSC</div>
+								<div id="campus_utm" class="campus-choice">UTM</div>
+								<div id="campus_utsg" class="campus-choice">UTSG</div>
+								<div id="campus_utsc" class="campus-choice">UTSC</div>
+								<div id="campus_other" class="campus-choice">Other</div>
 							</div>
 						</section>
 
 						<h2>x</h2>
 						<section>
-							<p>A bit about myself 
-							</p>
-							<label for="Message">What brings me to this TEDx event (max 200 words). Have I ever attended or helped organize a TEDx event? 
-								<br>(I love/play/do/care/am passionate)</label><br />
-							<textarea name="Message" rows="20" cols="40" id="applyMessage"></textarea>
+							<label for="Message">
+								In under <span id="count_left">200</span> words, I'd love to come to this event because
+							</label>
+							<textarea name="Message" class="wizard-message" id="applyMessage" placeholder="I love/play/do/care/am passionate"></textarea>
 						</section>
 
 						<h2>x</h2>
 						<section>
-							<label for="Dietary-res">Before I go, I love food but I am (allergic to water)</label><br />
-							<input type="text" name="Dietary-res" id="Dietary_res" />
-							<label for="Additional_info">(Optional) Anything I would like to add </label><br />
-							<textarea name="Additional_info" rows="20" cols="40" id="additional_info"></textarea>
+							<label for="Dietary-res">Before I go, I'd like to mention that I love food but I am </label><br />
+							<input type="text" name="Dietary-res" id="Dietary_res" placeholder="allergic to water"/>
+							<label for="Additional_info">Oh and also, I would like to add </label><br />
+							<textarea name="Additional_info" class="wizard-message" style="height: 100px;"id="additional_info" placeholder="Some other stuff"></textarea>
 						</section>
 						
 						<h2>x</h2>
 						<section>
-							<label for="interst-afterparty-ticket">Great! Would I be interested in buying a afterparty ticket?</label><br />
+							<label for="interst-afterparty-ticket">Last but not least, I'd be interested in buying a afterparty ticket</label><br />
 							<div id="afterparty_choices">
-								<div id="afterparty_yes" style="cursor: pointer; cursor: hand;">Yes!</div>
-								<div id="afterparty_no" style="cursor: pointer; cursor: hand;">No.</div>
+								<div id="afterparty_yes" class="campus-choice">Yes!</div>
+								<div id="afterparty_no" class="campus-choice">No.</div>
 							</div>
 						</section>
 						
