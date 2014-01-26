@@ -251,7 +251,7 @@ p {
 }
 
 .description-ted-heading {
-		font-size:1.25em;
+		font-size:1.1em;
 }
 
 .description-ted-body {
@@ -259,24 +259,22 @@ p {
 }
 
 .description-tedx {
-		margin-top: 13%;
 		
 }
 
 .description-tedx-title {
 		font-size: 2.2em;
 		font-weight:bolder;
-		color:#FF3B06;
+		
 
 }
 
 .description-tedx-heading {
-		font-size:1.2em;
+		font-size:1.1em;
 		
 }
 
 .description-tedx-body {
-		font-size: 1.02em;
 		opacity:.8;
 }
 
