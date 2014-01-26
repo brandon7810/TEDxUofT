@@ -408,6 +408,12 @@ p {
 	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
 }
 
+/*Apply Page Styling*/
+#apply-area {
+	padding:5% 12%;
+	text-align:center;
+}
+
 
 /* Form Styles */
 
