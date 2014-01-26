@@ -469,6 +469,9 @@ p {
     color: #FF2B06;
     padding: 13px 25px;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .wizard-message{
@@ -481,6 +484,9 @@ p {
     font-size: 14px;
     outline: none;
     resize: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /* Wizard */
@@ -524,10 +530,7 @@ p {
     width: 100%;
 }
 
-.wizard > .steps a,
-.wizard > .steps a:hover,
-.wizard > .steps a:active
-{
+.wizard > .steps a{
     display: inline-block;
     width: auto;
     line-height: 1px;
@@ -537,6 +540,13 @@ p {
     -webkit-border-radius: 100%;
     -moz-border-radius: 5px;
     border-radius: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.wizard > .steps a:hover, .wizard > .steps a:active{
+    background: #FF2B06;
+    color: #FFF;
 }
 
 .wizard > .steps .disabled a,
@@ -632,6 +642,9 @@ p {
     font-size: 1.5em;
     outline: none;
     font-family: 'HelveticaNeueLight', Calibri, Arial, sans-serif;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .wizard > .content > .body input[type="checkbox"]
@@ -692,20 +705,24 @@ p {
     margin: 0 0 0 1em;
 }
 
-.wizard > .actions a,
-.wizard > .actions a:hover,
-.wizard > .actions a:active
-{
+.wizard > .actions a{
     background: #FFF;
     color: #BBB;
     border: 3px solid #BBB;
     display: block;
     padding: 0.5em 1em;
     text-decoration: none;
-
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.wizard > .actions a:hover,
+.wizard > .actions a:active{
+    color: #FF2B06;
+    border: 3px solid #FF2B06;
 }
 
 .wizard > .actions .disabled a,
