@@ -11,9 +11,10 @@ $(function ()
 
       //Events happen in different step
       onStepChanging: function (event, currentIndex, priorIndex) { 
+		var newIndex = priorIndex;
 
-        //First step
-        if(currentIndex == 0){
+        //Finishing First step
+        if(newIndex == 1){
           name = $('#applyName').val();
           email = $('#applyEmail').val();
           phone = $('#Phone').val();
@@ -26,8 +27,8 @@ $(function ()
             return true;
           }
           
-        //Second step
-      }else if(currentIndex == 1){
+        //Finishing Second step
+      }else if(newIndex == 2){	
         occupation = $('#Occupation').val();
 
         if(occupation.length == 0){
@@ -37,25 +38,9 @@ $(function ()
           return true;
         }
 
-        //Third step
-      }else if(currentIndex == 2){
+        //Finishing Third step
+      }else if(newIndex == 3){
         message = $('#applyMessage').val();
-
-        var max_count = 200;
-        var wordCounts = {};
-
-        $("#applyMessage").on('keyup', function() {
-          var words = this.value.match(/\S+/g).length;
-          if (words > max_count) {
-              // Split the string on first 200 words and rejoin on spaces
-              var trimmed = $(this).val().split(/\s+/, max_count).join(" ");
-              // Add a space at the end to keep new typing making new words
-              $(this).val(trimmed + " ");
-          }
-            else {
-                $('#count_left').html(max_count-words);
-            }
-        });
 
         if (message.length == 0){
           $('#applyMessage').css('border','1px solid #FF2B06');
@@ -64,28 +49,59 @@ $(function ()
           return true;
         }
         
-        //Fourth step
-      }else if(currentIndex == 3){
+        //Finishing Fourth step
+      }else if(newIndex == 4){
         dietary_res = $('#Dietary_res').val();
         additional_info = $('#additional_info').val();
         return true;
-        
-        //Fifth
-      }else if(currentIndex == 4){
-        if(!afterparty_yes_bool && !afterparty_no_bool){
-          return false;
-        }else{
-          return true;
-        }
-      }             
+      }else{
+		return true;
+	  }
 
     },      
-      //Event happens when finishing all the steps
-      onFinished: function (event, currentIndex) {
-        alert("Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nOccupation: " + occupation + "\nMessage: " + message +
-          "\nDietary restrictions: " + dietary_res + "\nAddtional info: " + additional_info + "\nCampus: " + campus + "\nAfter Party: " + party_ticket);
-      }
+      //Event happens after finishing all the steps
+      onFinished: function (event, currentIndex) {		  
+
+		
+		$.post( "applyengine.php", {Name: name, Email: email, Message: message, Phone: phone, Occupation: occupation, Dietary_res: dietary_res, Additional_info: additional_info, Campus: campus, Party_ticket: party_ticket})
+			.done(function() {
+				$('#apply-area').html("Thanks! Your application has been submitted!");
+			}).fail(function() {
+				$('#apply-area').html("Sorry! Error occurred. Please come back later.");
+			});
+      },
+	  
+	  //Event happens before finishing all the steps
+	  onFinishing: function (event, currentIndex) { 
+		return true;
+		//Fifth
+		/*
+		if(currentIndex == 4){
+			if(!afterparty_yes_bool && !afterparty_no_bool){
+			  return false;
+			}else{
+			  return true;
+			}
+		}*/
+	  }
     });
+
+		
+var max_count = 200;
+var wordCounts = {};
+
+$("#applyMessage").on('keyup', function() {
+  var words = this.value.match(/\S+/g).length;
+  if (words > max_count) {
+	  // Split the string on first 200 words and rejoin on spaces
+	  var trimmed = $(this).val().split(/\s+/, max_count).join(" ");
+	  // Add a space at the end to keep new typing making new words
+	  $(this).val(trimmed + " ");
+  }
+	else {
+		$('#count_left').html(max_count-words);
+	}
+});	
 
 var utm_bool = false;
 var utsc_bool = false;
@@ -173,26 +189,26 @@ $("#afterparty_no").click(function(event) {
   $("#afterparty_yes").css('background','white');
 });
 
-});
+	});
 
 $('#ContactSubmit').click(function(){
   var name = $('#Name').val();
   var email = $('#Email').val();
   var message = $('#Message').val();
   
-  if( name.length==0 || message.length==0 || email.length==0){
-    alert("Sorry! Please complete all the blanks.");
-  }else if (email.indexOf("@") == -1){
-    alert("Sorry! You've entered invalid an email!");
+  if( name.length==0){
+    $('#Name').css('border-bottom','1px solid #FF2B06');
+  }else if (email.indexOf("@") == -1 || email.length == 0){
+    $('#Email').css('border-bottom','1px solid #FF2B06');
   }else if (message.length <= 5){
-    alert("Sorry! Your message was too short!");
+    $('#Message').css('border-bottom','1px solid #FF2B06');
   }else{
-    alert("Thanks! Your message has been submitted!");
     
-    $.post( "contactengine.php", { Name: name, Email: email, Message: message } );
-    
-    $(':input','#contactform')
-    .not(':button, :submit, :reset, :hidden')
-    .val('');  
+    $.post( "contactengine.php", { Name: name, Email: email, Message: message })
+		.done(function() {
+			$('#contact-area').html("Thanks! Your message has been submitted!");
+		}).fail(function() {
+			$('#contact-area').html("Sorry! Error occurred. Please come back later.");
+		});
   }
 });
