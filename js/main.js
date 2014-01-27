@@ -11,7 +11,7 @@ $(function ()
 
       //Events happen in different step
       onStepChanging: function (event, currentIndex, priorIndex) { 
-		var newIndex = priorIndex;
+        var newIndex = priorIndex;
 
         //Finishing First step
         if(newIndex == 1){
@@ -55,25 +55,27 @@ $(function ()
         additional_info = $('#additional_info').val();
         return true;
       }else{
-		return true;
-	  }
+        return true;
+      }
 
     },      
       //Event happens after finishing all the steps
       onFinished: function (event, currentIndex) {		  
 
-		
-		$.post( "applyengine.php", {Name: name, Email: email, Message: message, Phone: phone, Occupation: occupation, Dietary_res: dietary_res, Additional_info: additional_info, Campus: campus, Party_ticket: party_ticket})
-			.done(function() {
-				$('#apply-area').html("Thanks! Your application has been submitted!");
-			}).fail(function() {
-				$('#apply-area').html("Sorry! Error occurred. Please come back later.");
-			});
+
+        $.post( "applyengine.php", {Name: name, Email: email, Message: message, Phone: phone, Occupation: occupation, Dietary_res: dietary_res, Additional_info: additional_info, Campus: campus, Party_ticket: party_ticket})
+        .done(function() {
+          $('#wizard').fadeOut(300);
+          $('#wizard-success').delay(300).fadeIn(300);
+        }).fail(function() {
+          $('#wizard').fadeOut(300);
+          $('#wizard-unsuccess').delay(300).fadeIn(300);
+        });
       },
-	  
+
 	  //Event happens before finishing all the steps
 	  onFinishing: function (event, currentIndex) { 
-		return true;
+      return true;
 		//Fifth
 		/*
 		if(currentIndex == 4){
@@ -83,10 +85,10 @@ $(function ()
 			  return true;
 			}
 		}*/
-	  }
-    });
+ }
+});
 
-		
+
 var max_count = 200;
 var wordCounts = {};
 
@@ -98,9 +100,9 @@ $("#applyMessage").on('keyup', function() {
 	  // Add a space at the end to keep new typing making new words
 	  $(this).val(trimmed + " ");
   }
-	else {
-		$('#count_left').html(max_count-words);
-	}
+  else {
+    $('#count_left').html(max_count-words);
+  }
 });	
 
 var utm_bool = false;
@@ -189,7 +191,7 @@ $("#afterparty_no").click(function(event) {
   $("#afterparty_yes").css('background','white');
 });
 
-	});
+});
 
 $('#ContactSubmit').click(function(){
   var name = $('#Name').val();
@@ -203,12 +205,16 @@ $('#ContactSubmit').click(function(){
   }else if (message.length <= 5){
     $('#Message').css('border-bottom','1px solid #FF2B06');
   }else{
-    
+
     $.post( "contactengine.php", { Name: name, Email: email, Message: message })
-		.done(function() {
-			$('#contact-area').html("Thanks! Your message has been submitted!");
-		}).fail(function() {
-			$('#contact-area').html("Sorry! Error occurred. Please come back later.");
-		});
-  }
+    .done(function() {
+     $('#contact-area').fadeOut(300, function() {
+      $('#contact-success').fadeIn(300);
+    });
+   }).fail(function() {
+     $('#contact-area').fadeOut(300, function() {
+      $('#contact-unsuccess').fadeIn(300);
+    });
+   });
+ }
 });
