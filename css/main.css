@@ -320,15 +320,21 @@ p {
 
 #contact-area {
 	width: 700px;
-    margin-top: 10%;
+    margin-top: 16%;
+    margin-left:15%;
+    
 }
 
 #contact-area input, #contact-area textarea {
-	padding: 5px;
+	padding: 8px;
 	width: 400px;
 	font-family: 'HelveticaNeueLight', Calibri, Arial, sans-serif;
+    font-size:11pt;
 	margin: 5px 0px 10px 0px;
-	border: 1px solid #ddd;
+	border: 1.5px solid #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 12px;
     outline: none;
     -webkit-transition: box-shadow 0.3s;
     -moz-transition: box-shadow 0.3s;
