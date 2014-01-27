@@ -259,8 +259,8 @@ p {
 .description-tedx-title {
 	font-size: 1.4em;
 	font-weight:bolder;
-		
 }
+
 .description-tedx-body {
 	opacity:.7;
 }
@@ -410,8 +410,15 @@ p {
 
 /*Apply Page Styling*/
 #apply-area {
-	padding:5% 12%;
+	padding:5% 12% 5% 8%;
 	text-align:center;
+}
+
+.apply_illustration {
+    width:100%;
+    position:fixed;
+    bottom:-21%;
+    left:0;
 }
 
 
