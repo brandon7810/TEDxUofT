@@ -230,7 +230,7 @@ p {
 	bottom:0;
 	text-align:center;
 	width:100%;
-	color: grey;
+	color: #ddd;
 	font-size:85%;
 	opacity:1;
 }
@@ -307,47 +307,65 @@ p {
 
 /*Contact Page*/
 
-.contact_img {
-	position:fixed;
-	top:-38%;
-	width:116%;
-	left:-10%;
-}
-
-#contact-page-wrap {
-	width: 900px;
-	background: white;
-	padding: 20px 30px 20px 50px;
-	margin: 150px auto;
-	height: auto !important;
-	height: 550px;
+.contact-img {
+    position:fixed;
+    top:-130px;
+    width: 118%;
+    height: 300px;
+    left:-10%;
+    background-image: url("../img/About_illustration.png");
+    background-position-y: -140px;
+    background-size: cover;
 }
 
 #contact-area {
 	width: 700px;
-	margin-top: 50px;
+    margin-top: 10%;
 }
 
 #contact-area input, #contact-area textarea {
 	padding: 5px;
-	width: 401px;
-	font-family: Helvetica, sans-serif;
-	font-size: 1.4em;
+	width: 400px;
+	font-family: 'HelveticaNeueLight', Calibri, Arial, sans-serif;
 	margin: 5px 0px 10px 0px;
-	border: 2px solid #ccc;
+	border: 1px solid #ddd;
+    outline: none;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 #contact-area textarea {
-	height: 90px;
+	height: 200px;
 }
 
 #contact-area textarea:focus, #contact-area input:focus {
-	border: 2px solid #900;
+    border:1px solid #fafafa;
+    -webkit-box-shadow:0 0 6px #FF2B06;
+    -moz-box-shadow:0 0 5px #FF2B06;
+    box-shadow:0 0 5px #FF2B06;
+    outline: none;
 }
 
-#contact-area input.submit-button {
-	width: 100px;
-	float: right;
+#contact-area .submit-button {
+    background: #FFF;
+    color: #BBB;
+    border: 1px solid #BBB;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    float: right;
+}
+
+#contact-area .submit-button:hover, .submit-button:active {
+    color: #FF2B06;
+    border: 1px solid #FF2B06;
 }
 
 #contact-area label {
@@ -356,7 +374,7 @@ p {
 	margin-right: 20px;
 	width: 150px;
 	padding-top: 5px;
-	font-size: 1.1em;
+    margin-top: 3px;
 }
 
 /*Speaker page*/
@@ -740,6 +758,13 @@ p {
 {
     background: #eee;
     color: #aaa;
+    display: none;
+}
+
+.success-message{
+    display: none;
+}
+.unsuccess-message{
     display: none;
 }
 
