@@ -66,10 +66,10 @@ $(function ()
         $.post( "applyengine.php", {Name: name, Email: email, Message: message, Phone: phone, Occupation: occupation, Dietary_res: dietary_res, Additional_info: additional_info, Campus: campus, Party_ticket: party_ticket})
         .done(function() {
           $('#wizard').fadeOut(300);
-          $('.success-message').delay(300).fadeIn(300);
+          $('#wizard-success').delay(300).fadeIn(300);
         }).fail(function() {
           $('#wizard').fadeOut(300);
-          $('.unsuccess-message').delay(300).fadeIn(300);
+          $('#wizard-unsuccess').delay(300).fadeIn(300);
         });
       },
 
@@ -209,11 +209,11 @@ $('#ContactSubmit').click(function(){
     $.post( "contactengine.php", { Name: name, Email: email, Message: message })
     .done(function() {
      $('#contact-area').fadeOut(300, function() {
-      $('.success-message').fadeIn(300);
+      $('#contact-success').fadeIn(300);
     });
    }).fail(function() {
      $('#contact-area').fadeOut(300, function() {
-      $('.unsuccess-message').fadeIn(300);
+      $('#contact-unsuccess').fadeIn(300);
     });
    });
  }
