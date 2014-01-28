@@ -60,17 +60,14 @@ $(function ()
 
     },      
       //Event happens after finishing all the steps
-      onFinished: function (event, currentIndex) {		  
+      onFinished: function (event, currentIndex) {	
 
+	  
+		var body = "Name: " + name +"%0A%0AEamil: " + email + "%0A%0APhone: " + phone + "%0A%0AOccupation: " + occupation + "%0A%0ADietary Restriction: " + dietary_res
+		+ "%0A%0ACampus: " + campus +"%0A%0AAdditional Info: " + additional_info +"%0A%0AAfter Party: " + party_ticket + "%0A%0AMessage: "+ message;
+		
+		window.location.href = "mailto:applications@TEDxUofT.com?Subject=Application Submission&body=" + body;
 
-        $.post( "applyengine.php", {Name: name, Email: email, Message: message, Phone: phone, Occupation: occupation, Dietary_res: dietary_res, Additional_info: additional_info, Campus: campus, Party_ticket: party_ticket})
-        .done(function() {
-          $('#wizard').fadeOut(300);
-          $('#wizard-success').delay(300).fadeIn(300);
-        }).fail(function() {
-          $('#wizard').fadeOut(300);
-          $('#wizard-unsuccess').delay(300).fadeIn(300);
-        });
       },
 
 	  //Event happens before finishing all the steps
@@ -205,16 +202,11 @@ $('#ContactSubmit').click(function(){
   }else if (message.length <= 5){
     $('#Message').css('border-bottom','1px solid #FF2B06');
   }else{
-
-    $.post( "contactengine.php", { Name: name, Email: email, Message: message })
-    .done(function() {
-     $('#contact-area').fadeOut(300, function() {
+	var body = "Name: " + name +"%0A%0AEamil: " + email + "%0A%0AMessage: "+ message;
+	window.location.href = "mailto:applications@TEDxUofT.com?Subject=Visitor Contact us&body=" + body;
+	$('#contact-area').fadeOut(300, function() {
       $('#contact-success').fadeIn(300);
     });
-   }).fail(function() {
-     $('#contact-area').fadeOut(300, function() {
-      $('#contact-unsuccess').fadeIn(300);
-    });
-   });
+
  }
 });
