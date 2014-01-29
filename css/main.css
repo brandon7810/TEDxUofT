@@ -35,6 +35,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+
 }
 
 .btn:after {
@@ -294,7 +295,7 @@ p {
 }
 
 .partner-logo {
-    width:15em;
+    width:18em;
     margin:2%;
     margin-left:10%;
 }
