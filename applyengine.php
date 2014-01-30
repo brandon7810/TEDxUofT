@@ -1,6 +1,6 @@
 <?php
 
-$EmailFrom = "AppcalitionSubmission@TEDxUofT.com";
+$EmailFrom = "Applications@TEDxUofT.com";
 $EmailTo = "Kai@TEDxUofT.com";
 $Subject = "Application Submission";
 

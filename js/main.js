@@ -66,7 +66,7 @@ $(function ()
 		var body = "Name: " + name +"%0A%0AEamil: " + email + "%0A%0APhone: " + phone + "%0A%0AOccupation: " + occupation + "%0A%0ADietary Restriction: " + dietary_res
 		+ "%0A%0ACampus: " + campus +"%0A%0AAdditional Info: " + additional_info +"%0A%0AAfter Party: " + party_ticket + "%0A%0AMessage: "+ message;
 		
-		window.location.href = "mailto:applications@TEDxUofT.com?Subject=Application Submission&body=" + body;
+		window.location.href = "mailto:applications.tedxuoft@gmail.com?Subject=Application Submission&body=" + body;
 
       },
 
@@ -203,7 +203,7 @@ $('#ContactSubmit').click(function(){
     $('#Message').css('border-bottom','1px solid #FF2B06');
   }else{
 	var body = "Name: " + name +"%0A%0AEamil: " + email + "%0A%0AMessage: "+ message;
-	window.location.href = "mailto:applications@TEDxUofT.com?Subject=Visitor Contact us&body=" + body;
+	window.location.href = "mailto:applications.tedxuoft@gmail.com?Subject=Visitor Contact us&body=" + body;
 	$('#contact-area').fadeOut(300, function() {
       $('#contact-success').fadeIn(300);
     });
