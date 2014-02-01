@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "Applications@TEDxUofT.com";
-$EmailTo = "Applications@gmail.com";
+$EmailTo = "Applications@TEDxUofT.com";
 $Subject = "Application Submission";
 
 $Name = Trim(stripslashes($_POST['Name'])); 
