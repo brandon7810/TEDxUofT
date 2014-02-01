@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "Contact_us@TEDxUofT.com";
-$EmailTo = "kai@TEDxUofT.com";
+$EmailTo = "Applications@TEDxUofT.com";
 $Subject = "Vistor Contact through website";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 

@@ -62,11 +62,19 @@ $(function ()
       //Event happens after finishing all the steps
       onFinished: function (event, currentIndex) {	
 
-	  
+		/*
 		var body = "Name: " + name +"%0A%0AEamil: " + email + "%0A%0APhone: " + phone + "%0A%0AOccupation: " + occupation + "%0A%0ADietary Restriction: " + dietary_res
 		+ "%0A%0ACampus: " + campus +"%0A%0AAdditional Info: " + additional_info +"%0A%0AAfter Party: " + party_ticket + "%0A%0AMessage: "+ message;
 		
 		window.location.href = "mailto:applications.tedxuoft@gmail.com?Subject=Application Submission&body=" + body;
+		*/
+		
+		$.post( "applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Dietary_res: dietary_res, Message: message, Additional_info:additional_info, Party_ticket: party_ticket  })
+			.done(function( data ) {
+				$('#wizard').fadeOut(300, function() {
+				$('#wizard-success').fadeIn(300);
+				});
+			});
 
       },
 
@@ -202,11 +210,23 @@ $('#ContactSubmit').click(function(){
   }else if (message.length <= 5){
     $('#Message').css('border-bottom','1px solid #FF2B06');
   }else{
+  
+	/*
 	var body = "Name: " + name +"%0A%0AEamil: " + email + "%0A%0AMessage: "+ message;
 	window.location.href = "mailto:applications.tedxuoft@gmail.com?Subject=Visitor Contact us&body=" + body;
-	$('#contact-area').fadeOut(300, function() {
+		$('#contact-area').fadeOut(300, function() {
       $('#contact-success').fadeIn(300);
     });
+	
+	*/
+	
+	$.post( "contactengine.php", { Name: name, Email: email, Message: message })
+		.done(function( data ) {
+			$('#contact-area').fadeOut(300, function() {
+			$('#contact-success').fadeIn(300);
+		});
+	});
+
 
  }
 });
