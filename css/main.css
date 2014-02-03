@@ -191,12 +191,16 @@ p {
 
 .page-container{
     padding: 35px 100px 0 200px;
+    height:100%;
 }
 
 .col-half{
     width: 50%;
+    height:85%;
     padding: 0 30px;
     float: left;
+    position:relative;
+    overflow:auto;
 }
 
 /* Page 1 - Home */
@@ -220,9 +224,6 @@ position: absolute;
 }
 
 .theme-description {
-    position:absolute;
-    height:100%;
-    overflow:scroll;
 }
 
 .theme-description-title {
@@ -260,8 +261,10 @@ position: absolute;
 }
 
 .description-ted {
-    position:absolute;
-    height:80%;
+    position:relative;
+    height:800px;
+    overflow:auto;
+    
 }
 
 .description-ted-title {
