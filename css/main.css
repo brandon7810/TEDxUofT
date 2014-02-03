@@ -220,7 +220,7 @@ position: absolute;
 	right:65px;
 	width:342px;
     height:65%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .theme-description {
@@ -233,6 +233,12 @@ position: absolute;
 
 .theme-description-p {
     margin: 10px 0px 15px;
+}
+
+.social_icons {
+    height:2.2em;
+    padding-right: 1.5em;
+    padding-left: .2em;
 }
 
 .theme-description-footer {
