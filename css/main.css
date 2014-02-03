@@ -58,14 +58,14 @@ html, body {
 }
 
 body {
-    font-family: 'HelveticaNeueLight', Calibri, Arial, sans-serif;
+    font-family: 'Open Sans','HelveticaNeueLight', Calibri, Arial, sans-serif;
     color: #333;
     background: #FFF;
     overflow: hidden;
 }
 
 p {
-    font-size: 14px;
+    font-size: .8em;
     line-height: 25px;
     margin-top: 0
 }
@@ -190,7 +190,7 @@ p {
 }
 
 .page-container{
-    padding: 35px 100px 0 200px
+    padding: 35px 100px 0 200px;
 }
 
 .col-half{
@@ -205,25 +205,33 @@ p {
 }
 .tedx-logo {
     background: url("../img/TEDx_logo.png") no-repeat;
-    position: absolute;
     right: 109px;
     width: 300px;
     height: 85px;
     top: 19%;
 }
-.theme-description {
-    position: fixed;
+
+.theme {
+position: absolute;
 	right:65px;
 	width:342px;
-    margin-top: 13%;	
+    height:65%;
+    margin-top: 10%;
 }
+
+.theme-description {
+    position:absolute;
+    height:100%;
+    overflow:scroll;
+}
+
 .theme-description-title {
-    margin: 40px 0 5px;		
+    margin: 0px 0 5px;		
+    font-weight:300;
 }
 
 .theme-description-p {
     margin: 10px 0px 15px;
-	font-size:100%;
 }
 
 .theme-description-footer {
@@ -231,8 +239,7 @@ p {
 	bottom:0;
 	text-align:center;
 	width:100%;
-	color: #ddd;
-	font-size:85%;
+	color: #bbb;
 	opacity:1;
 }
 
@@ -251,6 +258,12 @@ p {
 	bottom:-35%;
 	left:-10%;
 }
+
+.description-ted {
+    position:absolute;
+    height:80%;
+}
+
 .description-ted-title {
 	font-size: 1.4em;
 }
@@ -465,6 +478,11 @@ p {
 #apply-area {
 	padding:5% 12% 5% 8%;
 	text-align:center;
+}
+
+#apply-area label span {
+    color:#FF2B06;
+    font-weight:300;
 }
 
 .apply_illustration {

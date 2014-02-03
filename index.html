@@ -8,6 +8,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
+    <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    
     <link rel="icon" type="image/ico" href="img/favicon.ico" />
 
     <link rel="stylesheet" href="css/main.css"/>
@@ -24,7 +27,6 @@
 
     <div class="pt-page pt-page-1" id="main-page">
         <div class="pt-trigger-container">
-		
             <button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
             <button class="btn pt-trigger on-page" data-animation="1" data-goto="1">Home</button>
             <!-- <button class="btn pt-trigger" data-animation="3" data-goto="2">News</button> -->
@@ -34,24 +36,26 @@
             <button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
             <button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
        	</div>
-       	<div class="tedx-logo"></div>
-       	<div class="theme-description">
-            <h2 class="theme-description-title">DIMENSIONS</h2>
-			<p class="theme-description-p">
-				An open ended and all encompassing theme that reflects the various fields of study of our speakers, the many skills and interests of 82,000 students at the University of Toronto’s three campuses, and the endless outcomes of ideas worth sharing.
-			</p >
-			<p class="theme-description-p">
-				In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. 
-			</p>
-			<p class="theme-description-p">
-				On March 1st, 2014, we hope you join us in taking it to the next dimension.
-			</p>
+        <div class="theme">
+            <div class="tedx-logo"></div>
+            <div class="theme-description">
+                <h2 class="theme-description-title">DIMENSIONS</h2>
+                    <p class="theme-description-p">
+                        An open ended and all encompassing theme that reflects the various fields of study of our speakers, the many skills and interests of 82,000 students at the University of Toronto’s three campuses, and the endless outcomes of ideas worth sharing.
+                    </p>
+                    <p class="theme-description-p">
+                        In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. 
+                    <p class="theme-description-p">
+                        On March 1st, 2014, at the Isabel Bader Theatre, we hope you join us in taking it to the next dimension. Like most TEDx events, our conference is invitation only. Interested attendees are encouraged to apply here (link). For more information see our FAQ (link).
+                    </p>
+            </div>
+            <div class="theme-description-footer">
+                <p>This independent TEDx event is operated under license from TED.</p>
+            </div>
         </div>
-		<div class="theme-description-footer">
-			<p>This independent TEDx event is operated under license from TED.</p>
-		</div>
-    </div>
+        </div>
 
+    <!-- <h1>News</h1> -->
     <div class="pt-page pt-page-2">
         <div class="pt-trigger-container">
 		
@@ -66,9 +70,9 @@
         <!-- <h1>News</h1> -->
     </div>
 
+    <!--About Page -->
     <div class="pt-page pt-page-3">
         <div class="pt-trigger-container">
-		
             <button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
             <button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
             <!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
@@ -79,8 +83,8 @@
             <button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
         </div>
         <div class="page-container">
-	        <div class="col-half description-ted">
-				<img class="about_img" src="img/About_illustration.png">
+            <img class="about_img" src="img/About_illustration.png">
+	        <div class="col-half">
 	        	<h3 class="description-ted-title">About TED</h3>
 	        	<p class="description-ted-heading">
 	        		TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a conference in California 26 years ago, TED has grown to support those world-changing ideas with many initiatives.
@@ -93,7 +97,7 @@
 				</p>
 	        </div>
 
-	        <div class="col-half description-tedx">
+	        <div class="col-half">
 	        	<h3 class="description-tedx-title">So what is TEDx?</h3>
 	        	<p class="description-tedx-heading">
 	        		In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. </p>
@@ -292,7 +296,7 @@
 					<div id="wizard">
 						<h2>x</h2>
 						<section>
-							<label for="Name">Hi! My name is</label>
+							<label for="Name"><span>Delegate Application</span><br><br> Hi! My name is</label>
 							<input type="text" name="Name" id="applyName" placeholder="Alexander The-Great"/>
 							
 							<label for="Email">and you can reach me at </label>
@@ -363,7 +367,7 @@
         </div>
 		
 		<div class="page-container">
-	        <div class="col-half description-ted">
+	        <div class="col-half">
 	        	<h3 class="description-ted-title">FAQ</h3>
 				
 	        	<p class="description-ted-heading">
@@ -395,7 +399,7 @@
 				
 	        </div>
 
-	        <div class="col-half description-tedx">
+	        <div class="col-half">
 				<h3 class="description-tedx-title" style="color:white">_</h3>
 				<p class="description-ted-heading">
 					Why do I have to apply?
