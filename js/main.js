@@ -69,7 +69,7 @@ $(function ()
 		window.location.href = "mailto:applications.tedxuoft@gmail.com?Subject=Application Submission&body=" + body;
 		*/
 		
-		$.post( "applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Dietary_res: dietary_res, Message: message, Additional_info:additional_info, Party_ticket: party_ticket  })
+		$.post( "php/applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Dietary_res: dietary_res, Message: message, Additional_info:additional_info, Party_ticket: party_ticket  })
 			.done(function( data ) {
 				$('#wizard').fadeOut(300, function() {
 				$('#wizard-success').fadeIn(300);
@@ -220,7 +220,7 @@ $('#ContactSubmit').click(function(){
 	
 	*/
 	
-	$.post( "contactengine.php", { Name: name, Email: email, Message: message })
+	$.post( "php/contactengine.php", { Name: name, Email: email, Message: message })
 		.done(function( data ) {
 			$('#contact-area').fadeOut(300, function() {
 			$('#contact-success').fadeIn(300);
