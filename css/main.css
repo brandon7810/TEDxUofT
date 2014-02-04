@@ -437,7 +437,12 @@ position: absolute;
 /*Speaker page*/
 
 #speaker-page-wrap {
-	margin: 100px 0px 0px 100px;
+	margin: 130px 0px 100px 100px;
+}
+
+#speaker-page-wrap img{
+	height: 160px;
+	width: 180px;
 }
 
 .da-thumbs {
