@@ -193,15 +193,22 @@ p {
     padding: 35px 100px 0 200px;
     height:100%;
 }
-
+.row {
+    overflow: auto;
+    position: relative;
+    max-height: 85%;
+}
 .col-half{
     width: 50%;
-    height:85%;
     padding: 0 30px;
     float: left;
-    position:relative;
-    overflow:auto;
 }
+
+.top-10 { margin-top: 10px }
+.top-20 { margin-top: 20px }
+.bot-10 { margin-bottom: 10px }
+.bot-20 { margin-bottom: 20px }
+.text-center {text-align: center }
 
 /* Page 1 - Home */
 .pt-page-1 {
@@ -223,9 +230,6 @@ position: absolute;
     margin-top: 8%;
 }
 
-.theme-description {
-}
-
 .theme-description-title {
     margin: 0px 0 5px;		
     font-weight:300;
@@ -244,6 +248,7 @@ position: absolute;
 .theme-description-footer {
 	position:fixed;
 	bottom:0;
+    left: 0;
 	text-align:center;
 	width:100%;
 	color: #bbb;
@@ -287,13 +292,16 @@ position: absolute;
 .description-tedx-body {
 	opacity:.7;
 }
-
 /*End of About*/
 
+/* FAQ Page */
 .pt-page-4 {
     background: #FFF;
 }
-
+.description-ted-heading{
+    font-weight: 600;
+}
+/*End FAQ Page */
 
 /*Partners Page*/
 .pt-page-5 {
@@ -311,8 +319,6 @@ position: absolute;
     color:#A8A8A8;
 }
 
-
-
 .partners-images {
 }
 
@@ -321,10 +327,6 @@ position: absolute;
     margin:2%;
     margin-left:10%;
 }
-
-
-
-
 
 .pt-page-6 {
     background: #FFF;
@@ -362,18 +364,16 @@ position: absolute;
     position:fixed;
     top:-130px;
     width: 118%;
-    height: 22em;
+    height: 200px;
     left:-10%;
     background-image: url("../img/About_illustration.png");
-    background-position-y: -140px;
+    background-position-y: 80%;
     background-size: cover;
 }
 
 #contact-area {
 	width: 700px;
-    margin-top: 15%;
-    margin-left:15%;
-    
+    margin: 10% auto;
 }
 
 #contact-area input, #contact-area textarea {
@@ -385,7 +385,7 @@ position: absolute;
 	border: 1.5px solid #ddd;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 12px;
+    border-radius: 5px;
     outline: none;
     -webkit-transition: box-shadow 0.3s;
     -moz-transition: box-shadow 0.3s;
@@ -484,7 +484,6 @@ position: absolute;
 	border-bottom: 1px solid rgba(255,255,255,0.5);
 	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
 }
-
 .overlay {
 	width:40%;
 	display:none;
@@ -492,13 +491,10 @@ position: absolute;
 	padding:10px;
 	background-image:url(../img/overlay.png)	
 }
-
-
 .overlay img{
 	float: left;
 
 }
-
 .overlay a.close {
 	background-image:url(../img/close.png);
 	position:absolute;
@@ -510,6 +506,11 @@ position: absolute;
 }
 
 /*Apply Page Styling*/
+.delegate-application{
+    font-weight: 300;
+    color: #FF2B06;
+    font-size: 1.5em;
+}
 #apply-area {
 	padding:5% 12% 5% 8%;
 	text-align:center;
@@ -519,14 +520,12 @@ position: absolute;
     color:#FF2B06;
     font-weight:300;
 }
-
 .apply_illustration {
     width:100%;
     position:fixed;
     bottom:-21%;
     left:0;
 }
-
 
 /* Form Styles */
 
@@ -733,7 +732,7 @@ position: absolute;
     position: absolute;
     width: 95%;
     height: 95%;
-    padding: 7% 2.5%;
+    padding: 5% 2.5%;
 }
 
 .wizard > .content > .body ul
