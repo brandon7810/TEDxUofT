@@ -80,7 +80,7 @@ $(function ()
 
 	  //Event happens before finishing all the steps
 	  onFinishing: function (event, currentIndex) { 
-      return true;
+		return true;
 		//Fifth
 		/*
 		if(currentIndex == 4){
@@ -90,7 +90,7 @@ $(function ()
 			  return true;
 			}
 		}*/
- }
+	}
 });
 
 
@@ -234,10 +234,10 @@ $("a[rel]").overlay({
 				closeOnClick: true
 });
 
-			$(function() {
+$(function() {
 
-				$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
-					hoverDelay : 75
-				}); } );
+	$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+		hoverDelay : 75
+	}); } );
 
-			});
+});
