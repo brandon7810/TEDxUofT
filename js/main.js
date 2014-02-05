@@ -226,7 +226,18 @@ $('#ContactSubmit').click(function(){
 			$('#contact-success').fadeIn(300);
 		});
 	});
-
-
  }
 });
+
+
+$("a[rel]").overlay({
+				closeOnClick: true
+});
+
+			$(function() {
+
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+					hoverDelay : 75
+				}); } );
+
+			});

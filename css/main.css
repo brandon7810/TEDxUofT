@@ -440,11 +440,6 @@ position: absolute;
 	margin: 130px 0px 100px 100px;
 }
 
-#speaker-page-wrap img{
-	height: 160px;
-	width: 180px;
-}
-
 .da-thumbs {
 	list-style: none;
 	width: 984px;
@@ -463,6 +458,8 @@ position: absolute;
 }
 .da-thumbs li a,
 .da-thumbs li a img {
+	height: 160px;
+	width: 180px;
 	display: block;
 	position: relative;
 }
@@ -486,6 +483,30 @@ position: absolute;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	border-bottom: 1px solid rgba(255,255,255,0.5);
 	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+}
+
+.overlay {
+	width:40%;
+	display:none;
+	color:#fff;
+	padding:10px;
+	background-image:url(../img/overlay.png)	
+}
+
+
+.overlay img{
+	float: left;
+
+}
+
+.overlay a.close {
+	background-image:url(../img/close.png);
+	position:absolute;
+	right:5px;
+	top:7px;
+	cursor:pointer;
+	height:27px;
+	width:27px;
 }
 
 /*Apply Page Styling*/
