@@ -507,8 +507,8 @@ position: absolute;
 
 /*Speakers Pages*/
 .speaker-row{
-    margin-top: 10%;
-    margin-bottom: 100px;
+    margin: 10% 0;
+    padding-bottom: 20%;
 }
 .back-icon{
     position: absolute;
@@ -529,7 +529,7 @@ position: absolute;
     background-image: url(../img/About_illustration.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position-y: 470px;
+    background-position-y: 200%;
 }
 
 /*Apply Page Styling*/
