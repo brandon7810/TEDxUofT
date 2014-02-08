@@ -12,18 +12,20 @@
 	<link rel="stylesheet" href="css/main.css"/>
 	<link rel="stylesheet" href="css/animation.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+	<script>
+		$(window).load(function(){
+			$('#loading').fadeOut(2000);
+		});
+    </script>
 </head>
-
 <body>
-
+	<div class="modal" id="loading"></div>
 	<div class="pt-wrapper">
 		<!--All Pages-->
 		<div class="pt-page pt-page-1" id="main-page">
 			<div class="pt-trigger-container">
 				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
 				<button class="btn pt-trigger on-page" data-animation="1" data-goto="1">Home</button>
-				<!-- <button class="btn pt-trigger" data-animation="3" data-goto="2">News</button> -->
 				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
 				<button class="btn pt-trigger" data-animation="3" data-goto="8">FAQ</button>
 				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
@@ -44,503 +46,668 @@
 						</p>
 						<a href="https://www.facebook.com/tedxuoft" target="_blank"><img class="social_icons" src="img/TEDx_fb_icon.png"></a>
 						<a href="https://twitter.com/TEDxUofT" target="_blank"><img class="social_icons" src="img/TEDx_twitter_icon.png"></a>
-					</div>
-					<div class="theme-description-footer">
-						<p>This independent TEDx event is operated under license from TED.</p>
-					</div>
+				</div>
+				<div class="theme-description-footer">
+					<p>This independent TEDx event is operated under license from TED.</p>
+				</div>
+				<div class="pt-message">
+					<p>Your browser does not support CSS animations.</p>
 				</div>
 			</div>
+		</div>
 
+		<div class="pt-page pt-page-2">
+			<div class="pt-trigger-container">
+
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
 			<!-- <h1>News</h1> -->
-			<div class="pt-page pt-page-2">
-				<div class="pt-trigger-container">
-
-					<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
-					<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
-					<!-- <button class="btn pt-trigger on-page" data-animation="3" data-goto="2">News</button> -->
-					<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
-					<!-- <button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button> -->
-					<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
-					<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
-				</div>
-				<!-- <h1>News</h1> -->
-			</div>
+		</div>
 
 			<!--About Page -->
-			<div class="pt-page pt-page-3">
-				<div class="pt-trigger-container">
-					<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
-					<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
-					<!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
-					<button class="btn pt-trigger on-page" data-animation="3" data-goto="3">About</button>
-					<button class="btn pt-trigger" data-animation="3" data-goto="8">FAQ</button>
-					<!-- <button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button> -->
-					<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
-					<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
-				</div>
-				<div class="page-container">
-					<img class="about_img" src="img/About_illustration.png">
-					<div class="row">
-						<div class="col-half">
-							<div class="theme-description">
-								<h3 class="description-ted-title">About TED</h3>
-								<p class="description-ted-heading">
-									TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a conference in California 26 years ago, TED has grown to support those world-changing ideas with many initiatives.
-								</p>
-								<p class="description-ted-body">
-									At a TED conference, the world’s leading thinkers and doers are asked to give the talk of their lives in 18 minutes or less. TED speakers have included Roger Ebert, Sheryl Sandberg, Bill Gates, Elizabeth Gilbert, Benoit Mandelbrot, Phillippe Starck, Ngozi Okonjo-Iweala, Brian Greene, Isabel Allende and former UK Prime Minister Gordon Brown. Three major TED events are held each year: The TED Conference takes place every spring in Vancouver, Canada, simultaneous with TEDActive, in Whistler, BC; and the TEDGlobal Conference takes place each summer in Edinburgh, Scotland.
-								</p>
-								<p class="description-ted-body">
-									On TED.com, talks from TED conferences are shared with the world for free as TED Talks videos. A new TED Talk is posted every weekday. Through the Open Translation Project, TED Talks are subtitled by volunteers worldwide into more than 90 languages. Through our distribution networks, TED Talks are shared on TV, radio, Netflix and many websites.
-								</p>
-							</div>
+		<div class="pt-page pt-page-3">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger on-page" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="8">FAQ</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container">
+				<img class="about_img" src="img/About_illustration.png">
+				<div class="row">
+					<div class="col-half">
+						<div class="theme-description">
+							<h3 class="description-ted-title">About TED</h3>
+							<p class="description-ted-heading">
+								TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a conference in California 26 years ago, TED has grown to support those world-changing ideas with many initiatives.
+							</p>
+							<p class="description-ted-body">
+								At a TED conference, the world’s leading thinkers and doers are asked to give the talk of their lives in 18 minutes or less. TED speakers have included Roger Ebert, Sheryl Sandberg, Bill Gates, Elizabeth Gilbert, Benoit Mandelbrot, Phillippe Starck, Ngozi Okonjo-Iweala, Brian Greene, Isabel Allende and former UK Prime Minister Gordon Brown. Three major TED events are held each year: The TED Conference takes place every spring in Vancouver, Canada, simultaneous with TEDActive, in Whistler, BC; and the TEDGlobal Conference takes place each summer in Edinburgh, Scotland.
+							</p>
+							<p class="description-ted-body">
+								On TED.com, talks from TED conferences are shared with the world for free as TED Talks videos. A new TED Talk is posted every weekday. Through the Open Translation Project, TED Talks are subtitled by volunteers worldwide into more than 90 languages. Through our distribution networks, TED Talks are shared on TV, radio, Netflix and many websites.
+							</p>
 						</div>
-						<div class="col-half">
-							<h3 class="description-tedx-title">So what is TEDx?</h3>
-							<p class="description-tedx-heading">
-								In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. </p>
-								<p class="description-tedx-body">
-									At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
-								</p>
-							</div>
-						</div>
+					</div>
+					<div class="col-half">
+						<h3 class="description-tedx-title">So what is TEDx?</h3>
+						<p class="description-tedx-heading">
+							In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. </p>
+						<p class="description-tedx-body">
+							At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
+						</p>
 					</div>
 				</div>
+			</div>
+		</div>
 
-				<div class="pt-page pt-page-4">
-					<div class="pt-trigger-container">
-						<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
-						<!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
-						<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
-						<!-- <button class="btn pt-trigger on-page" data-animation="3" data-goto="4">Speakers</button> -->
-						<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
-						<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
-						<button class="btn pt-trigger" data-animation="3" data-goto="7">Apply</button>
-					</div>
+		<div class="pt-page pt-page-4">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
+				<button class="btn pt-trigger on-page" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="7">Apply</button>
+			</div>
 
-					<div id="speaker-page-wrap">
-						<ul id="da-thumbs" class="da-thumbs">
-							<li>
-								<a  rel="#alison_M_overlay" href="#">
-									<img src="img/speaker/alison_M.jpg" />
-									<div><span>Alison McGuigan</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#clifton_overlay" href="#">
-									<img src="img/speaker/clifton.jpg" />
-									<div><span>Clifton van der Linden</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#cameron_and_todd_overlay" href="#">
-									<img src="img/speaker/cameron_and_todd.jpg" />
-									<div><span>Cameron Robertson and Todd Reichert</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#george_E_overlay" href="#">
-									<img src="img/speaker/george_E.jpg" />
-									<div><span>George V. Eleftheriades </span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#greg_W_overlay" href="#">
-									<img src="img/speaker/greg_W.jpg" />
-									<div><span>Greg Wells</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#jessie_M_overlay" href="#">
-									<img src="img/speaker/jessie_M.jpg" />
-									<div><span>Jessie MacAlpine</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#andrew_N_overlay" href="#">
-									<img src="img/speaker/andrew_N.jpg" />
-									<div><span>Andrew Nisker</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#steve_E_overlay" href="#">
-									<img src="img/speaker/steve_E.jpg" />
-									<div><span>Steve Easterbrook</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#marcel_D_overlay" href="#">
-									<img src="img/speaker/marcel_D.jpg" />
-									<div><span>Marcel Danesi</span></div>
-								</a>
-							</li>
-							<li>
-								<a  rel="#matt_R_overlay" href="#">
-									<img src="img/speaker/matt_R.jpg" />
-									<div><span>Matt Ratto</span></div>
-								</a>
-							</li>
-							<li>	
-								<a  rel="#Sarah_K_overlay" href="#">
-
-									<div><span>Sarah Kenvyn</span></div>
-								</a>
-							</li>
-
-						</ul>
-
-						<div class="overlay" id="alison_M_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/alison_M.jpg"  width="320"  />
-								Alison McGuigan is a pioneer in the field of artificial tissue design and morphogenesis engineering. Her work uniquely combines tissue engineering, computer chip fabrication methods, and developmental biology to assemble tissue systems for regenerative medicine and drug screening applications. Specifically her team has created engineering tools to mimicking tissue organizational processes that occur in the developing embryo.  
+			<div class="page-container">
+				<h3 class="text-center bor-10">Our Speakers</h3>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="9" href="#">
+							<img src="img/speaker/sm/alison_m.jpg" />
+							<div>
+								<span>Alison McGuigan</span>
+								<small>Artificial tissue design and morphogenesis Engineer</small>
 							</div>
-						</div>
-
-						<div class="overlay" id="clifton_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/clifton.jpg"  width="255" />
-								Cliff is a serial innovator working at the nexus of new media, public policy, and data science. He is the founder and CEO of Vox Pop Labs as well as the creator of Vote CompassTM, an online democratic engagement platform commissioned by the CBC that has been used by millions of Canadians over the course of recent federal and provincial election campaigns. Vote CompassTM has also been commissioned by The Wall Street Journal and most recently by the Australian Broadcasting Corporation for national elections in the United States and Australia, respectively. 	
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="10" href="#">
+							<img src="img/speaker/sm/clifton.jpg" />
+							<div>
+								<span>Clifton van der Linden</span>
+								<small>Founder and CEO of Vox Pop Labs as well as the creator of Vote CompassTM</small>
 							</div>
-						</div>
-
-						<div class="overlay" id="cameron_and_todd_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/cameron_and_todd.jpg" width="396"/>
-								Having been likened to modern day Wright Brothers, Todd Reichert and Cameron Robertson are known for the achievement of two historical aviation firsts. In 2010, Todd and Cameron led a team of engineering students to the realization of an ancient aeronautical dream with the first sustained flight of a human-powered flapping-wing aircraft. For this achievement Todd and Cameron were named co-recipients of the CASI Trans-Canada McKee Trophy, among the highest honours in Canadian Aerospace. As a follow on to their first success, the two sought to tackle the 33-year old AHS Sikorsky Prize: a challenge requiring a human-powered helicopter to reach an altitude of 3 metres and stay aloft for 60 seconds. On June 13th 2013, they achieved what many had thought to be impossible, with the prize-winning flight of the Atlas helicopter.
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="11" href="#">
+							<img src="img/speaker/sm/cameron_and_todd.jpg" />
+							<div>
+								<span>Cameron Robertson and Todd Reichert</span>
+								<small>Founded the first human-powered flapping-wing aircraft</small>
 							</div>
-						</div>	
-
-						<div class="overlay" id="george_E_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/george_E.jpg" width="282"/>
-								George Eleftheriades is a recognized international authority and pioneer in the new area of metamaterials: Man-made media with electromagnetic properties that transcend those in nature. In 2002 Dr. Eleftheriades introduced a method for synthesizing high-quality metamaterials using loaded transmission lines. Together with his graduate students, he provided the first experimental evidence of imaging beyond the diffraction limit with a negative-index lens and pioneered several novel microwave and optical devices.  These include a recent demonstration of the first experimental thin active cloak. 
-							</div>				
-						</div>
-
-						<div class="overlay" id="greg_W_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/greg_W.jpg" width="282"/>
-								Greg Wells is a health and high performance expert who inspires better living through better nutrition and better fitness.  As a coach, scientist and physiologist Dr. Wells has amassed more than 20 years of world-class experience with the extremes of human health and performance.  As a result, he understands how it is possible for anyone to have better health, energy and fitness.
-								He has coached, trained and inspired dozens of elite athletes to win medals at the Commonwealth Games, World Championships and the Olympics.  He makes regular appearances on national television and radio as a health and performance expert, contributes articles for numerous magazines, research papers for scientific journals and is a high-demand speaker for better health, fitness and performance around the world.
-							</div>				
-						</div>
-
-						<div class="overlay" id="jessie_M_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/jessie_M.jpg" width="282"/>
-								A newspaper article and bioherbicide lead 17-year old Jessie to discover cooking oil could be used to treat malaria. 
-								Three years ago, Jessie developed an herbicide composed of used coffee grounds and an invasive Canadian weed species. After coming across a newspaper article proposing the potential for herbicides to treat malaria, she realized the active ingredient in her herbicide was naturally found as mustard oil. She approached the McLaughlin-Rotman Centre for Global Health with her idea and the result was an antimalarial treatment one million times cheaper than its currently available competitors. A single 10mg dose of pure, non-toxic mustard oil delivered orally could significantly inhibit over 94% of infection: a simple, accessible and sustainable alternative to modern antimalarial practices.
-							</div>				
-						</div>				
-
-						<div class="overlay" id="andrew_N_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/andrew_N.jpg" width="282"/>
-								Andrew Nisker makes films that inspire people to take action and revolutionize the way they treat the environment and themselves. 
-								His latest film, Sticky Situation, takes on the world's second most common form of litter: chewing gum. Andrew believes that the story will act as a gateway to young minds to enhance their awareness of this seemingly invisible pollution that has an enormous social, environmental and economic impact. He is currently working on an accompanying 'gum pollution' app that will give any smart phone user the opportunity to quantify gum pollution by simply taking a picture of the gum-strewn sidewalks in their hometown. He hopes the combination of the film and the crowd-sourced gum pollution map will pressure governments, industry, and consumers to tackle the worldwide polluting habits that perpetuate an annual clean-up cost of over one billion dollars.
-							</div>				
-						</div>
-
-						<div class="overlay" id="steve_E_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/steve_E.jpg" width="282"/>
-								Steve Easterbrook studies how models of complex system behaviour can help us to make wise choices about living sustainably on planet earth.
-								Steve’s teaching and research focusses on the dynamics of complex systems. He conducted the first detailed anthropological study of how climate scientists build and test computational simulations of the earth’s climate, and is currently investigating how weaknesses in people’s understanding of climate change lead to poor decision-making. In his teaching he uses hands-on simulations to help students develop critical thinking skills to analyze global problems.
-							</div>				
-						</div>
-
-						<div class="overlay" id="marcel_D_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/marcel_D.jpg" width="330"/>
-								Is currently Full Professor of linguistic anthropology and director of the Program in Semiotics and Communication Theory at the University of Toronto. He earned his Ph.D. in linguistics (specializing in Italian) at the University of Toronto in 1974. He has taught at Rutgers University, the University of Rome (La Sapienza), and currently is cross-appointed to the University of Lugano (Switzerland) in the Faculty of Communication Sciences. In 1998 he was elected a Fellow of the Royal Society of Canada for his work in the fields of linguistics and semiotics.
-								He has published extensively in various areas. Some of his books have become widely quoted. These include: Vico, Metaphor, and the Origin of Language (1993), Cool: The Signs and Meanings of Adolescence (1994), Of Cigarettes, High Heels, and Other Interesting Things (1999), Understanding Media Semiotics (2002), The Puzzle Instinct: The Meaning of Puzzles in Human Life (2002), Forever Young: The Teen-Aging of Modern Culture (2003), Brands (2006), The Quest for Meaning: A Guide to Semiotic Theory and Practice (2007), Popular Culture: Introductory Perspectives (2007), Geeks, Goths, and Gangstas: Youth Culture and the Evolution of Modern Society (2010), and The History of the Kiss: The Birth of Popular Culture (2013).
-								His books have been translated into many languages including Farsi, Russian, Italian, French, Chinese, Japanese, Korean, and others.
-								He writes puzzles for That’s Puzzling, a booklet that comes with the Toronto Star on Saturdays. He writes a blog on puzzles and the brain for Psychology Today. And has composed three books of puzzles for Harlequin Books. He also teaches an undergraduate course on the history of puzzles at Victoria College.
-								He is currently Editor-in-Chief of the main journal in the field of semiotics, Semiotica. He is also Vice-President of the Semiotic Society of America.
-								In addition to his academic interests, he founded a band with students at the University of Toronto seven years ago at Victoria College, called the Semiotones, which is still playing for charity. All the proceeds from gigs and record sales go to the Hospital for Sick Children. He has composed and written the lyrics for two CDs that are on iTunes. A third CD, titled In My Dreams will be on iTunes shortly. This CD has been judged by those outside the campus to be a truly exceptional one and hopefully will garner quite a bit of money for the Hospital. The band has an international following and even performed at a major festival in the city of Lugano, Switzerland.
-								He has been married for 46 years to his high school sweetheart, has one daughter and three grandchildren. One of the grandchildren just enrolled at the University of Toronto.
-							</div>				
-						</div>
-
-						<div class="overlay" id="matt_R_overlay">
-							<div style="padding:40px">
-								<img src="img/speaker/matt_R.jpg" width="282"/>
-								Matt Ratto is an Assistant Professor in the Faculty of Information at the University of Toronto and Director of the Semaphore research cluster on Inclusive Design, Mobile and Pervasive Computing. He also leads ThingTank Lab, a non-profit lab space and research project examining and designing the Internet of Things. Matt’s research examines how hands-on productive work – making – can supplement and extend critical reflection on the relations between digital technologies and society. His work builds upon the new possibilities offered by open source software and hardware, as well as the developing technologies of 3D printing and rapid prototyping. He coined the term 'critical making' to refer generally to pedagogical and research practices that blend technical and conceptual work
-							</div>				
-						</div>
-
-						<div class="overlay" id="Sarah_K_overlay">
-							<div style="padding:40px">
-								Sarah Kenvyn is a generalist. As a singer/songwriter, multi-instrumentalist, web designer, entrepreneur, writer and science student she juggles many hats. Her 2010 debut album “This is the Sea” was truly a solo project that Sarah composed, performed, engineered, produced and mixed in her home recording studio over the course of many years while starting a carbon neutral web design business and working towards a BSc in neuroscience and cell biology at the University of Toronto.
-								Growing up in a rural area without TV or much access to media and possessing a wide diversity of interests and a love of learning, Kenvyn, (aka Sarah Barnett Burns), began her quest for a well rounded education from a young age. Thanks to a strange and chaotic childhood amidst back-to-the-land hippies, Kenvyn learned a diverse set of skills from basket weaving and welding to martial arts and playwriting. Since leaving home at the age of 16 and moving to Zimbabwe to volunteer for a development aid organization she has continued this quest for interdisciplinary learning. She has studied a wide range of topics including sustainable farming, Traditional Chinese Medicine, yoga, Buddhist meditation, amateur boxing, sustainable building practices, pottery, modern dance and business management. She has also held a diverse list of positions including working as an entomology scout for an eco orchard program, a coordinator for a teen mothers program, a writer, producer and composer for 3 short films, a nanny, a shiatsu therapist, a boxing coach, a yoga teacher, a data manager, a graphic designer, an interactive department director, an elder and hospice care volunteer, a research assistant, a tutor and an event facilitator.
-								Sarah is the 4th year of her undergrad degree and will be attending graduate school next year to conduct research on the epigenetics of childhood stress and/or nutrient deprivation on brain development. She is the recipient of multiple academic awards including the University of Toronto Excellence Award and the Brookfield Peter Bronfman Leadership Scholarship. She has also toured as a solo musician across North America and opened for a number of artists including the legendary Ferron and continues to write music and collaborate with other artists. Sarah currently performs with her band The Craft when she isn’t studying, running her web design business, or pursuing the next challenge.  
-							</div>				
-						</div>
-					</div>
-				</div>
-
-				<div class="pt-page pt-page-5">
-					<div class="pt-trigger-container">
-
-						<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
-						<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
-						<!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
-						<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
-						<button class="btn pt-trigger" data-animation="4" data-goto="8">FAQ</button>
-						<!-- <button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button> -->
-						<button class="btn pt-trigger on-page" data-animation="3" data-goto="5">Partners</button>
-						<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
-					</div>
-					<div class="page-container">
-						<div id="partners-area">
-
-							<div class="partners-text">
-								<h2>We want to thank the following sponsors for making TEDxUofT 2014 possible. 
-									<br><span>Your support has been invaluable in helping us spread ideas worth sharing!</span></h2>  
-								</div>
-								<div class="partners-images">
-									<a href="http://www.utoronto.ca/" target="_blank"><img class="partner-logo" src="img/uoft-logo.jpg"></a>
-									<a href="http://nuanceleadership.ca/" target="_blank"><img class="partner-logo" src="img/nuance-logo.jpg"></a>
-									<a href="http://www.manulife.ca/" target="_blank"><img class="partner-logo" src="img/manulife-logo.jpg"></a>
-									<a href="http://harthouse.ca/good-ideas-fund/" target="_blank"><img class="partner-logo" src="img/hh-logo.jpg"><a/>
-
-									</div>
-								</div>
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="12" href="#">
+							<img src="img/speaker/sm/george_e.jpg" />
+							<div>
+								<span>George V. Eleftheriades </span>
+								<small>Recognized international authority and pioneer in the new area of Metamaterials</small>
 							</div>
-						</div>
-
-						<div class="pt-page pt-page-6">
-							<div class="pt-trigger-container">
-
-								<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
-								<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
-								<!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
-								<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
-								<button class="btn pt-trigger" data-animation="4" data-goto="8">FAQ</button>
-								<!-- <button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button> -->
-								<button class="btn pt-trigger" data-animation="4" data-goto="5">Partners</button>
-								<button class="btn pt-trigger on-page" data-animation="3" data-goto="6">Contact</button>
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="13" href="#">
+							<img src="img/speaker/sm/greg_w.jpg" />
+							<div>
+								<span>Greg Wells</span>
+								<small>Health and high performance expert</small>
 							</div>
-							<div class="contact-img"></div>
-
-							<div id="contact-area">
-								<h3 class="text-center">Get in Touch</h3>
-								<form id="contactform">
-									<label for="Name">Name:</label>
-									<input type="text" name="Name" id="Name" />
-
-									<label for="Email">Email:</label>
-									<input type="text" name="Email" id="Email" />
-
-									<label for="Message">Message:</label><br />
-									<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
-								</form>
-
-								<a id="ContactSubmit" class="submit-button btn">Submit</a>
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="14" href="#">
+							<img src="img/speaker/sm/jessie_m.jpg" />
+							<div>
+								<span>Jessie MacAlpine</span>
+								<small>Discovered cooking oil could be used to treat malaria</small>
 							</div>
-							<div id="contact-success" class="success-message"><h3>Thanks! Your message has been submitted! 	We'll get back to you real soon :)</h3></div>
-							<div id="contact-unsuccess" class="unsuccess-message"><h3>Oh No! Something went wrong with the submission process!</h3><p>Don't worry! You can email us at <a href="mailto:applications.tedxuoft@gmail.com">Applications@TEDxUofT.com</a> and we'll take a look into this situation</p></div>
-						</div>
-
-
-						<div class="pt-page pt-page-7">
-							<div class="pt-trigger-container">
-
-								<button class="btn pt-trigger on-page" data-animation="3" data-goto="7">Apply</button>
-								<button class="btn pt-trigger" data-animation="3" data-goto="1">Home</button>
-								<!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
-								<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
-								<button class="btn pt-trigger" data-animation="3" data-goto="8">FAQ</button>
-								<!-- <button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button> -->
-								<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
-								<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="15" href="#">
+							<img src="img/speaker/sm/andrew_n.jpg" />
+							<div>
+								<span>Andrew Nisker</span>
+								<small>Makes films that inspire people to take action and revolutionize the way they treat the environment</small>
 							</div>
-
-							<div class="page-container">
-								<img class="apply_illustration" src="img/TED_bird.png">
-
-								<div id="apply-area">
-									<div class="content">
-										<div id="wizard">
-											<h2>x</h2>
-											<section>
-												<div class="delegate-application bot-10">Delegate Application</div>
-												<label for="Name">Hi! My name is</label>
-												<input type="text" name="Name" id="applyName" placeholder="Alexander The-Great"/>
-
-												<label for="Email">and you can reach me at </label>
-												<input type="text" name="Email" id="applyEmail" placeholder="thegreat@ruling.com"/>
-
-												<label for="Phone">or at </label>
-												<input type="text" name="Phone" id="Phone" placeholder="123-456-7890"/>
-											</section>
-
-
-											<h2>x</h2>
-											<section>
-												<label for="Occupation">I work as a </label>
-												<input type="text" name="Occupation" id="Occupation" placeholder="Slave Master"/>
-
-												<label for="Campus">at this campus</label>
-												<div id="campus_choices">
-													<div id="campus_utm" class="campus-choice">UTM</div>
-													<div id="campus_utsg" class="campus-choice">UTSG</div>
-													<div id="campus_utsc" class="campus-choice">UTSC</div>
-													<div id="campus_other" class="campus-choice">Other</div>
-												</div>
-											</section>
-
-											<h2>x</h2>
-											<section>
-												<label for="Message">
-													In under <span id="count_left">200</span> words, I'd love to come to this event because
-												</label>
-												<textarea name="Message" class="wizard-message" id="applyMessage" placeholder="I love/play/do/care/am passionate"></textarea>
-											</section>
-
-											<h2>x</h2>
-											<section>
-												<label for="Dietary-res">Before I go, I'd like to mention that I love food but I am </label><br />
-												<input type="text" name="Dietary-res" id="Dietary_res" placeholder="allergic to water"/>
-												<label for="Additional_info">. Oh and also, I would like to add </label><br />
-												<textarea name="Additional_info" class="wizard-message" style="height: 100px;"id="additional_info" placeholder="Some other stuff"></textarea>
-											</section>
-
-											<h2>x</h2>
-											<section>
-												<label for="interst-afterparty-ticket">Last but not least, I'd be interested in buying an afterparty ticket</label><br />
-												<div id="afterparty_choices">
-													<div id="afterparty_yes" class="campus-choice">Yes!</div>
-													<div id="afterparty_no" class="campus-choice">No.</div>
-												</div>
-											</section>
-										</div>
-										<div id="wizard-success" class="success-message"><h3>Thanks! Your Application has been submitted! We'll get back to you real soon :)</h3></div>
-										<div id="wizard-unsuccess" class="unsuccess-message"><h3>Oh No! Something went wrong with the submission process!</h3><p>Don't worry! You can email us at <a href="mailto:applications.tedxuoft@gmail.com">applications.tedxuoft@gmail.com</a> and we'll take a look into this situation</p></div>
-									</div>
-								</div>
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="16" href="#">
+							<img src="img/speaker/sm/steve_e.jpg" />
+							<div>
+								<span>Steve Easterbrook</span>
+								<small>Studies the dynamics of complex systems</small>
 							</div>
-						</div>
-
-						<div class="pt-page pt-page-8">
-							<div class="pt-trigger-container">
-								<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
-								<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
-								<!-- <button class="btn pt-trigger" data-animation="4" data-goto="2">News</button> -->
-								<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
-								<button class="btn pt-trigger on-page" data-animation="3" data-goto="8">FAQ</button>
-								<!-- <button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button> -->
-								<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
-								<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
-
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="17" href="#">
+							<img src="img/speaker/sm/marcel_d.jpg" />
+							<div>
+								<span>Marcel Danesi</span>
+								<small>Director of the Program in Semiotics and Communication Theory</small>
 							</div>
-
-							<div class="page-container">
-								<div class="row">
-									<div class="col-half">
-										<h3 class="description-ted-title">FAQ</h3>
-									
-										<p class="description-ted-heading">
-											Where is the conference?
-										</p>
-										<p class="description-ted-body">
-											The 2014 conference will be taking place at the beautiful  <a href="http://www.vicu.utoronto.ca/hospitality/eventandspace/isabelbader.htm" target="_blank">Isabel Bader Theatre</a>
-										</p>
-										<p class="description-ted-heading">
-											When is the conference taking place?
-										</p>
-										<p class="description-ted-body">
-											TEDxUofT is a full day conference happening on March 1st from 9 am to 6 pm.
-										</p>
-										<p class="description-ted-heading">
-											What can I expect at this conference?
-										</p>				
-										<p class="description-ted-body">
-											This full day conference will be an engaging experience featuring 11 of the University’s brightest talent, in addition to 2 amazing performers. Stay tuned with our <a href="http://facebook.com/tedxuoft" target="_blank">Facebook</a> and <a href="https://twitter.com/TEDxUofT" target="_blank">Twitter</a> for announcements regarding our speaker lineup, and our performers! Their ideas will spark discussion during our intermissions, which will feature amazing food and interactive stations that promote the ideals of TED.
-										</p>
-										<p class="description-ted-heading">
-											How can I attend the Conference?
-										</p>				
-										<p class="description-ted-body">
-											Each interested attendee has to first submit an online application. We are looking for passionate delegates who are committed to attending the event, who believe strongly in the power of ideas, and who want to share those ideas with others to make a difference in the world. We will be accepting delegates based on the application alone, so make sure to highlight your best aspects and impress us! 
-										</p>
-										<p class="description-ted-heading">
-											How will I know if my application is accepted?
-										</p>				
-										<p class="description-ted-body">
-											We will be emailing all the accepted delegates once the applications close. There will be two rounds of invitations, so don't fret if you don't hear back right away! Once you accept the invitation, you will be able to purchase a ticket, which you will be given more specific instructions for in the invitation.
-										</p>
-										<p class="description-ted-heading">
-											This conference can’t be free can it? How much does it cost?
-										</p>				
-										<p class="description-ted-body">
-											As of this moment the conference price is expected to be $50. As students we understand just how expensive that is, and how many foot longs that buys you. Our team is working round the clock to round up an even larger selection of sponsors and innovative ideas to reduce the price.  We want to be as transparent as possible with our situation. Delegates from last year will question what has made the ticket price rise so much, and the answer is that this year our team has been ambitious in increasing conference attendance to nearly 500 delegates. As you increase delegates so do the costs; that said you can expect much more than you did last year with amazing food, extraordinary speakers and entertainers that by the end you’ll exit the theatre with a giant smile on your face.
-										</p>
-									
-									</div>
-									<div class="col-half">
-										<h3 class="description-tedx-title" style="color:white">_</h3>
-										<p class="description-ted-heading">
-											Why do I have to apply?
-										</p>
-										<p class="description-ted-body">
-											TEDx events are usually invitation only and require an application. This is done for a variety of reasons. We have an application form with the goal to learn more about the delegates (like if you are gluten intolerant, but also what you are passionate about), manage the overwhelming interest for the event, and get you out of your comfort zone since you are unlikely to have a friend to tag along. 
-										</p>
-										<p class="description-ted-heading">
-											How will you select delegates?
-										</p>
-										<p class="description-ted-body">
-											This is a tri-campus event, and we want that to be represented in our delegates, but we also want to include alumni, staff, professors and the general public. The application allows us to ensure that everyone who attends is a passionate individual who champions the TED ideals. It also shows us which delegates took the time and effort to thoughtfully fill out our application with something longer than a sentence.
-										</p>
-										<p class="description-ted-heading">
-											Why is this event tri-campus and not just downtown?
-										</p>
-										<p class="description-ted-body">
-											Let’s make something clear - to us the University of Toronto isn’t divided by campuses, we are a sole entity that stands for the same core values that can be amplified and celebrated using the TEDx platform.<br> Our team is pretty much 1/3 UTSC, 1/3 UTSG, and 1/3 UTM, and believe that our divers executive team has made the conference better…but it does make physical in person meetings a nightmare to schedule.
-										</p>
-										<p class="description-ted-heading">
-											I didn't receive an invitation. Are there other ways to be involved with TEDxUofT?
-										</p>
-										<p class="description-ted-body">
-											Yes! This year, we will be having a simultaneous live stream of the event available for anyone who is interested. This will be completely free and accessible through any device -- as long as you have wifi -- and we will post the access link closer to the date. 
-										</p>
-										<p class="description-ted-heading">
-											Are you looking for volunteers?
-										</p>
-										<p class="description-ted-body">
-											We are always on the lookout for individuals who are willing to help us out at the Conference. We will be posting more information on our Twitter and Facebook pages closer to the date, so keep your eyes open. 
-										</p>
-									</div>
-								</div>
+						</a>
+					</li>
+					<li>
+						<a class="pts-trigger" data-animation="1" data-goto="18" href="#">
+							<img src="img/speaker/sm/matt_r.jpg" />
+							<div>
+								<span>Matt Ratto</span>
+								<small>Director of the Semaphore research cluster on Inclusive Design, Mobile and Pervasive Computing</small>
 							</div>
+						</a>
+					</li>
+					<!-- <li>	
+						<a class="pts-trigger" data-animation="1" data-goto="19" href="#">
 
 							<div>
-
+								<span>Sarah Kenvyn</span>
+								<small>A singer/songwriter, multi-instrumentalist, web designer, entrepreneur, writer and science student</small>
 							</div>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
 
-							<div class="pt-message">
-								<p>Your browser does not support CSS animations.</p>
-							</div>
+		<div class="pt-page pt-page-5">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="8">FAQ</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger on-page" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container">
+				<div id="partners-area">
+					<div class="partners-text">
+						<h2>We want to thank the following sponsors for making TEDxUofT 2014 possible.</h2>
+						<span>Your support has been invaluable in helping us spread ideas worth sharing!</span> 
+					</div>
+					<div class="partners-images">
+						<a href="http://www.utoronto.ca/" target="_blank"><img class="partner-logo" src="img/uoft-logo.jpg"></a>
+						<a href="http://nuanceleadership.ca/" target="_blank"><img class="partner-logo" src="img/nuance-logo.jpg"></a>
+						<a href="http://www.manulife.ca/" target="_blank"><img class="partner-logo" src="img/manulife-logo.jpg"></a>
+						<a href="http://harthouse.ca/good-ideas-fund/" target="_blank"><img class="partner-logo" src="img/hh-logo.jpg"><a/>
+					</div>
+				</div>
+			</div>
+		</div>
 
-							<!--Google Analytics-->
-							<script>
-							(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-								(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-								m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-							})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<div class="pt-page pt-page-6">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="8">FAQ</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="5">Partners</button>
+				<button class="btn pt-trigger on-page" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="contact-img"></div>
 
-							ga('create', 'UA-47529145-1', 'tedxuoft.com');
-							ga('send', 'pageview');
-							</script>
+			<div id="contact-area">
+				<h3 class="text-center">Get in Touch</h3>
+				<form id="contactform">
+					<label for="Name">Name:</label>
+					<input type="text" name="Name" id="Name" />
 
-							<script src="http://jsdo.it/lib/three.js-r60/js"></script>
-							<script src="js/build/transition.min.js"></script>
-							<script src="js/build/tween.min.js"></script>
-							<script src="js/build/cube.min.js"></script>
-							<script src="js/main.js"></script>
-							<script src="js/lib/jquery.steps.js"></script>
-							<script src="js/jquery.hoverdir.js"></script>	
-							<!--jQuery.js is on the top -->
+					<label for="Email">Email:</label>
+					<input type="text" name="Email" id="Email" />
 
-						</body>
-						</html>
+					<label for="Message">Message:</label><br />
+					<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+				</form>
+
+				<a id="ContactSubmit" class="submit-button btn">Submit</a>
+			</div>
+			<div id="contact-success" class="success-message"><h3>Thanks! Your message has been submitted! 	We'll get back to you real soon :)</h3></div>
+			<div id="contact-unsuccess" class="unsuccess-message">
+				<h3>Oh No! Something went wrong with the submission process!</h3>
+				<p>Don't worry! You can email us at <a href="mailto:applications.tedxuoft@gmail.com">Applications@TEDxUofT.com</a> and we'll take a look into this situation</p>
+			</div>
+		</div>
+
+		<div class="pt-page pt-page-7">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger on-page" data-animation="3" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="8">FAQ</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+
+			<div class="page-container">
+				<img class="apply_illustration" src="img/TED_bird.png">
+
+				<div id="apply-area">
+					<div class="content">
+						<div id="wizard">
+							<h2>x</h2>
+							<section>
+								<div class="delegate-application bot-10">Delegate Application</div>
+								<label for="Name">Hi! My name is</label>
+								<input type="text" name="Name" id="applyName" placeholder="Alexander The-Great"/>
+
+								<label for="Email">and you can reach me at </label>
+								<input type="text" name="Email" id="applyEmail" placeholder="thegreat@ruling.com"/>
+
+								<label for="Phone">or at </label>
+								<input type="text" name="Phone" id="Phone" placeholder="123-456-7890"/>
+							</section>
+
+
+							<h2>x</h2>
+							<section>
+								<label for="Occupation">I work as a </label>
+								<input type="text" name="Occupation" id="Occupation" placeholder="Slave Master"/>
+
+								<label for="Campus">at this campus</label>
+								<div id="campus_choices">
+									<div id="campus_utm" class="campus-choice">UTM</div>
+									<div id="campus_utsg" class="campus-choice">UTSG</div>
+									<div id="campus_utsc" class="campus-choice">UTSC</div>
+									<div id="campus_other" class="campus-choice">Other</div>
+								</div>
+							</section>
+
+							<h2>x</h2>
+							<section>
+								<label for="Message">
+									In under <span id="count_left">200</span> words, I'd love to come to this event because
+								</label>
+								<textarea name="Message" class="wizard-message" id="applyMessage" placeholder="I love/play/do/care/am passionate"></textarea>
+							</section>
+
+							<h2>x</h2>
+							<section>
+								<label for="Dietary-res">Before I go, I'd like to mention that I love food but I am </label><br />
+								<input type="text" name="Dietary-res" id="Dietary_res" placeholder="allergic to water"/>
+								<label for="Additional_info">. Oh and also, I would like to add </label><br />
+								<textarea name="Additional_info" class="wizard-message" style="height: 100px;"id="additional_info" placeholder="Some other stuff"></textarea>
+							</section>
+
+							<h2>x</h2>
+							<section>
+								<label for="interst-afterparty-ticket">Last but not least, I'd be interested in buying an afterparty ticket</label><br />
+								<div id="afterparty_choices">
+									<div id="afterparty_yes" class="campus-choice">Yes!</div>
+									<div id="afterparty_no" class="campus-choice">No.</div>
+								</div>
+							</section>
+						</div>
+						<div id="wizard-success" class="success-message"><h3>Thanks! Your Application has been submitted! We'll get back to you real soon :)</h3></div>
+						<div id="wizard-unsuccess" class="unsuccess-message"><h3>Oh No! Something went wrong with the submission process!</h3><p>Don't worry! You can email us at <a href="mailto:applications.tedxuoft@gmail.com">applications.tedxuoft@gmail.com</a> and we'll take a look into this situation</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pt-page pt-page-8">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="3">About</button>
+				<button class="btn pt-trigger on-page" data-animation="3" data-goto="8">FAQ</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+
+			</div>
+
+			<div class="page-container">
+				<div class="row">
+					<div class="col-half">
+						<h3 class="description-ted-title">FAQ</h3>
+
+						<p class="description-ted-heading">
+							Where is the conference?
+						</p>
+						<p class="description-ted-body">
+							The 2014 conference will be taking place at the beautiful  <a href="http://www.vicu.utoronto.ca/hospitality/eventandspace/isabelbader.htm" target="_blank">Isabel Bader Theatre</a>
+						</p>
+						<p class="description-ted-heading">
+							When is the conference taking place?
+						</p>
+						<p class="description-ted-body">
+							TEDxUofT is a full day conference happening on March 1st from 9 am to 6 pm.
+						</p>
+						<p class="description-ted-heading">
+							What can I expect at this conference?
+						</p>				
+						<p class="description-ted-body">
+							This full day conference will be an engaging experience featuring 11 of the University’s brightest talent, in addition to 2 amazing performers. Stay tuned with our <a href="http://facebook.com/tedxuoft" target="_blank">Facebook</a> and <a href="https://twitter.com/TEDxUofT" target="_blank">Twitter</a> for announcements regarding our speaker lineup, and our performers! Their ideas will spark discussion during our intermissions, which will feature amazing food and interactive stations that promote the ideals of TED.
+						</p>
+						<p class="description-ted-heading">
+							How can I attend the Conference?
+						</p>				
+						<p class="description-ted-body">
+							Each interested attendee has to first submit an online application. We are looking for passionate delegates who are committed to attending the event, who believe strongly in the power of ideas, and who want to share those ideas with others to make a difference in the world. We will be accepting delegates based on the application alone, so make sure to highlight your best aspects and impress us! 
+						</p>
+						<p class="description-ted-heading">
+							How will I know if my application is accepted?
+						</p>				
+						<p class="description-ted-body">
+							We will be emailing all the accepted delegates once the applications close. There will be two rounds of invitations, so don't fret if you don't hear back right away! Once you accept the invitation, you will be able to purchase a ticket, which you will be given more specific instructions for in the invitation.
+						</p>
+						<p class="description-ted-heading">
+							This conference can’t be free can it? How much does it cost?
+						</p>				
+						<p class="description-ted-body">
+							As of this moment the conference price is expected to be $50. As students we understand just how expensive that is, and how many foot longs that buys you. Our team is working round the clock to round up an even larger selection of sponsors and innovative ideas to reduce the price.  We want to be as transparent as possible with our situation. Delegates from last year will question what has made the ticket price rise so much, and the answer is that this year our team has been ambitious in increasing conference attendance to nearly 500 delegates. As you increase delegates so do the costs; that said you can expect much more than you did last year with amazing food, extraordinary speakers and entertainers that by the end you’ll exit the theatre with a giant smile on your face.
+						</p>
+
+					</div>
+					<div class="col-half">
+						<h3 class="description-tedx-title" style="color:white">_</h3>
+						<p class="description-ted-heading">
+							Why do I have to apply?
+						</p>
+						<p class="description-ted-body">
+							TEDx events are usually invitation only and require an application. This is done for a variety of reasons. We have an application form with the goal to learn more about the delegates (like if you are gluten intolerant, but also what you are passionate about), manage the overwhelming interest for the event, and get you out of your comfort zone since you are unlikely to have a friend to tag along. 
+						</p>
+						<p class="description-ted-heading">
+							How will you select delegates?
+						</p>
+						<p class="description-ted-body">
+							This is a tri-campus event, and we want that to be represented in our delegates, but we also want to include alumni, staff, professors and the general public. The application allows us to ensure that everyone who attends is a passionate individual who champions the TED ideals. It also shows us which delegates took the time and effort to thoughtfully fill out our application with something longer than a sentence.
+						</p>
+						<p class="description-ted-heading">
+							Why is this event tri-campus and not just downtown?
+						</p>
+						<p class="description-ted-body">
+							Let’s make something clear - to us the University of Toronto isn’t divided by campuses, we are a sole entity that stands for the same core values that can be amplified and celebrated using the TEDx platform.<br> Our team is pretty much 1/3 UTSC, 1/3 UTSG, and 1/3 UTM, and believe that our divers executive team has made the conference better…but it does make physical in person meetings a nightmare to schedule.
+						</p>
+						<p class="description-ted-heading">
+							I didn't receive an invitation. Are there other ways to be involved with TEDxUofT?
+						</p>
+						<p class="description-ted-body">
+							Yes! This year, we will be having a simultaneous live stream of the event available for anyone who is interested. This will be completely free and accessible through any device -- as long as you have wifi -- and we will post the access link closer to the date. 
+						</p>
+						<p class="description-ted-heading">
+							Are you looking for volunteers?
+						</p>
+						<p class="description-ted-body">
+							We are always on the lookout for individuals who are willing to help us out at the Conference. We will be posting more information on our Twitter and Facebook pages closer to the date, so keep your eyes open. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- SPEAKERS PAGES -->
+		<div class="pt-page pt-page-9">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/alison_M.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Alison McGuigan</h3>
+						<p>Alison McGuigan is a pioneer in the field of artificial tissue design and morphogenesis engineering. Her work uniquely combines tissue engineering, computer chip fabrication methods, and developmental biology to assemble tissue systems for regenerative medicine and drug screening applications. Specifically her team has created engineering tools to mimicking tissue organizational processes that occur in the developing embryo. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-10">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/clifton.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Cliffton Van Der Linden</h3>
+						<p>Cliff is a serial innovator working at the nexus of new media, public policy, and data science. He is the founder and CEO of Vox Pop Labs as well as the creator of Vote CompassTM, an online democratic engagement platform commissioned by the CBC that has been used by millions of Canadians over the course of recent federal and provincial election campaigns. Vote CompassTM has also been commissioned by The Wall Street Journal and most recently by the Australian Broadcasting Corporation for national elections in the United States and Australia, respectively. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-11">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/cameron_and_todd.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Cameron Robertson and Todd Reichert</h3>
+						<p>Having been likened to modern day Wright Brothers, Todd Reichert and Cameron Robertson are known for the achievement of two historical aviation firsts. In 2010, Todd and Cameron led a team of engineering students to the realization of an ancient aeronautical dream with the first sustained flight of a human-powered flapping-wing aircraft. For this achievement Todd and Cameron were named co-recipients of the CASI Trans-Canada McKee Trophy, among the highest honours in Canadian Aerospace. As a follow on to their first success, the two sought to tackle the 33-year old AHS Sikorsky Prize: a challenge requiring a human-powered helicopter to reach an altitude of 3 metres and stay aloft for 60 seconds. On June 13th 2013, they achieved what many had thought to be impossible, with the prize-winning flight of the Atlas helicopter. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-12">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/george_E.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>George V. Eleftheriades</h3>
+						<p>George Eleftheriades is a recognized international authority and pioneer in the new area of metamaterials: Man-made media with electromagnetic properties that transcend those in nature. In 2002 Dr. Eleftheriades introduced a method for synthesizing high-quality metamaterials using loaded transmission lines. Together with his graduate students, he provided the first experimental evidence of imaging beyond the diffraction limit with a negative-index lens and pioneered several novel microwave and optical devices.  These include a recent demonstration of the first experimental thin active cloak. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-13">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/greg_W.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Greg Wells</h3>
+						<p>Greg Wells is a health and high performance expert who inspires better living through better nutrition and better fitness.  As a coach, scientist and physiologist Dr. Wells has amassed more than 20 years of world-class experience with the extremes of human health and performance.  As a result, he understands how it is possible for anyone to have better health, energy and fitness.</p>
+						<p>He has coached, trained and inspired dozens of elite athletes to win medals at the Commonwealth Games, World Championships and the Olympics.  He makes regular appearances on national television and radio as a health and performance expert, contributes articles for numerous magazines, research papers for scientific journals and is a high-demand speaker for better health, fitness and performance around the world.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-14">
+			<div class="pt-trigger-container page-container-bottom">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/jessie_M.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Jessie MacAlpine</h3>
+						<p>A newspaper article and bioherbicide lead 17-year old Jessie to discover cooking oil could be used to treat malaria.</p>
+						<p>Three years ago, Jessie developed an herbicide composed of used coffee grounds and an invasive Canadian weed species. After coming across a newspaper article proposing the potential for herbicides to treat malaria, she realized the active ingredient in her herbicide was naturally found as mustard oil. She approached the McLaughlin-Rotman Centre for Global Health with her idea and the result was an antimalarial treatment one million times cheaper than its currently available competitors. A single 10mg dose of pure, non-toxic mustard oil delivered orally could significantly inhibit over 94% of infection: a simple, accessible and sustainable alternative to modern antimalarial practices.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-15">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/andrew_N.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Andrew Nisker</h3>
+						<p>Andrew Nisker makes films that inspire people to take action and revolutionize the way they treat the environment and themselves.</p>
+						<p>His latest film, Sticky Situation, takes on the world's second most common form of litter: chewing gum. Andrew believes that the story will act as a gateway to young minds to enhance their awareness of this seemingly invisible pollution that has an enormous social, environmental and economic impact. He is currently working on an accompanying 'gum pollution' app that will give any smart phone user the opportunity to quantify gum pollution by simply taking a picture of the gum-strewn sidewalks in their hometown. He hopes the combination of the film and the crowd-sourced gum pollution map will pressure governments, industry, and consumers to tackle the worldwide polluting habits that perpetuate an annual clean-up cost of over one billion dollars.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-16">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/steve_E.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Steve Easterbrook</h3>
+						<p>Steve Easterbrook studies how models of complex system behaviour can help us to make wise choices about living sustainably on planet earth.</p>
+						<p>Steve’s teaching and research focusses on the dynamics of complex systems. He conducted the first detailed anthropological study of how climate scientists build and test computational simulations of the earth’s climate, and is currently investigating how weaknesses in people’s understanding of climate change lead to poor decision-making. In his teaching he uses hands-on simulations to help students develop critical thinking skills to analyze global problems.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-17">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/marcel_D.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Marcel Danesi</h3>
+						<p>Is currently Full Professor of linguistic anthropology and director of the Program in Semiotics and Communication Theory at the University of Toronto.</p>
+						<p>He earned his Ph.D. in linguistics (specializing in Italian) at the University of Toronto in 1974. He has taught at Rutgers University, the University of Rome (La Sapienza), and currently is cross-appointed to the University of Lugano (Switzerland) in the Faculty of Communication Sciences. In 1998 he was elected a Fellow of the Royal Society of Canada for his work in the fields of linguistics and semiotics.</p>
+						<p>He has published extensively in various areas. Some of his books have become widely quoted. These include: Vico, Metaphor, and the Origin of Language (1993), Cool: The Signs and Meanings of Adolescence (1994), Of Cigarettes, High Heels, and Other Interesting Things (1999), Understanding Media Semiotics (2002), The Puzzle Instinct: The Meaning of Puzzles in Human Life (2002), Forever Young: The Teen-Aging of Modern Culture (2003), Brands (2006), The Quest for Meaning: A Guide to Semiotic Theory and Practice (2007), Popular Culture: Introductory Perspectives (2007), Geeks, Goths, and Gangstas: Youth Culture and the Evolution of Modern Society (2010), and The History of the Kiss: The Birth of Popular Culture (2013).</p>
+						<p>His books have been translated into many languages including Farsi, Russian, Italian, French, Chinese, Japanese, Korean, and others.
+						He writes puzzles for That’s Puzzling, a booklet that comes with the Toronto Star on Saturdays. He writes a blog on puzzles and the brain for Psychology Today. And has composed three books of puzzles for Harlequin Books. He also teaches an undergraduate course on the history of puzzles at Victoria College.</p>
+						<p>He is currently Editor-in-Chief of the main journal in the field of semiotics, Semiotica. He is also Vice-President of the Semiotic Society of America.</p>
+						<p>n addition to his academic interests, he founded a band with students at the University of Toronto seven years ago at Victoria College, called the Semiotones, which is still playing for charity. All the proceeds from gigs and record sales go to the Hospital for Sick Children. He has composed and written the lyrics for two CDs that are on iTunes. A third CD, titled In My Dreams will be on iTunes shortly. This CD has been judged by those outside the campus to be a truly exceptional one and hopefully will garner quite a bit of money for the Hospital. The band has an international following and even performed at a major festival in the city of Lugano, Switzerland.</p>
+						<p>He has been married for 46 years to his high school sweetheart, has one daughter and three grandchildren. One of the grandchildren just enrolled at the University of Toronto.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-18">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"><img src="img/speaker/matt_R.jpg" width="320"/></div>
+					<div class="col-half">
+						<h3>Matt Ratto</h3>
+						<p>Matt Ratto is an Assistant Professor in the Faculty of Information at the University of Toronto and Director of the Semaphore research cluster on Inclusive Design, Mobile and Pervasive Computing. He also leads ThingTank Lab, a non-profit lab space and research project examining and designing the Internet of Things. Matt’s research examines how hands-on productive work – making – can supplement and extend critical reflection on the relations between digital technologies and society. His work builds upon the new possibilities offered by open source software and hardware, as well as the developing technologies of 3D printing and rapid prototyping. He coined the term 'critical making' to refer generally to pedagogical and research practices that blend technical and conceptual work</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pt-page pt-page-19">
+			<div class="pt-trigger-container">
+				<button class="btn pt-trigger" data-animation="4" data-goto="7">Apply</button>
+				<button class="btn pt-trigger" data-animation="4" data-goto="1">Home</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="3">About</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="4">Speakers</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="5">Partners</button>
+				<button class="btn pt-trigger" data-animation="3" data-goto="6">Contact</button>
+			</div>
+			<div class="page-container page-container-bottom">
+				<a href="#" data-animation="2" data-goto="4" class="icomoon-prev back-icon pts-trigger"></a>
+				<div class="row speaker-row">
+					<div class="pull-left"></div>
+					<div class="col-half">
+						<h3>Sarah Kenvyn</h3>
+						<p>Sarah Kenvyn is a generalist. As a singer/songwriter, multi-instrumentalist, web designer, entrepreneur, writer and science student she juggles many hats. Her 2010 debut album “This is the Sea” was truly a solo project that Sarah composed, performed, engineered, produced and mixed in her home recording studio over the course of many years while starting a carbon neutral web design business and working towards a BSc in neuroscience and cell biology at the University of Toronto.</p>
+						<p>Growing up in a rural area without TV or much access to media and possessing a wide diversity of interests and a love of learning, Kenvyn, (aka Sarah Barnett Burns), began her quest for a well rounded education from a young age. Thanks to a strange and chaotic childhood amidst back-to-the-land hippies, Kenvyn learned a diverse set of skills from basket weaving and welding to martial arts and playwriting. Since leaving home at the age of 16 and moving to Zimbabwe to volunteer for a development aid organization she has continued this quest for interdisciplinary learning. She has studied a wide range of topics including sustainable farming, Traditional Chinese Medicine, yoga, Buddhist meditation, amateur boxing, sustainable building practices, pottery, modern dance and business management. She has also held a diverse list of positions including working as an entomology scout for an eco orchard program, a coordinator for a teen mothers program, a writer, producer and composer for 3 short films, a nanny, a shiatsu therapist, a boxing coach, a yoga teacher, a data manager, a graphic designer, an interactive department director, an elder and hospice care volunteer, a research assistant, a tutor and an event facilitator.</p>
+						<p>Sarah is the 4th year of her undergrad degree and will be attending graduate school next year to conduct research on the epigenetics of childhood stress and/or nutrient deprivation on brain development. She is the recipient of multiple academic awards including the University of Toronto Excellence Award and the Brookfield Peter Bronfman Leadership Scholarship. She has also toured as a solo musician across North America and opened for a number of artists including the legendary Ferron and continues to write music and collaborate with other artists. Sarah currently performs with her band The Craft when she isn’t studying, running her web design business, or pursuing the next challenge.  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Google Analytics-->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-47529145-1', 'tedxuoft.com');
+	ga('send', 'pageview');
+	</script>
+
+	<script src="http://jsdo.it/lib/three.js-r60/js"></script>
+	<script src="js/build/transition.min.js"></script>
+	<script src="js/build/tween.min.js"></script>
+	<script src="js/build/cube.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/lib/jquery.steps.js"></script>
+	<script src="js/jquery.hoverdir.js"></script>	
+	<!--jQuery.js is on the top -->
+
+	</body>	
+</html>

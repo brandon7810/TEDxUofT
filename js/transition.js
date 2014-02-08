@@ -41,6 +41,11 @@ var PageTransitions = (function () {
             $pageTrigger = $(this);
             Animate($pageTrigger);
         });
+        
+        $('.pts-trigger').click(function() {
+            $pageTrigger = $(this);
+            Animate($pageTrigger);
+        });
     }
 
     // All pt-trigger click event calls this function

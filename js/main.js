@@ -230,10 +230,6 @@ $('#ContactSubmit').click(function(){
 });
 
 
-$("a[rel]").overlay({
-				closeOnClick: true
-});
-
 $(function() {
 
 	$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
