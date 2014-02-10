@@ -61,6 +61,8 @@ body.loading .modal {
     transition: all 0.3s;
 }
 
+.hidden { display: none !important }
+.red { color: #FF2B06 }
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
@@ -193,14 +195,12 @@ p {
 .pt-page h1 {
     position: absolute;
     font-weight: 300;
-    font-size: 4.4em;
-    line-height: 1;
-    letter-spacing: 6px;
-    margin: 0;
+    font-size: 2.4em;
     top: 35%;
-    width: 100%;
+    width: 70%;
+    left: 50%;
+    margin-left: -33%;
     text-align: center;
-    word-spacing: -0.3em;
 }
 
 .page-container{
@@ -527,6 +527,12 @@ position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: 200%;
+}
+.page-container-top{
+    background-image: url(../img/About_illustration.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -100%;
 }
 
 /*Apply Page Styling*/
