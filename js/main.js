@@ -76,11 +76,19 @@ $(function ()
 				});
 			});
 
+        $.post( "applyengine.php", {Name: name, Email: email, Message: message, Phone: phone, Occupation: occupation, Dietary_res: dietary_res, Additional_info: additional_info, Campus: campus, Party_ticket: party_ticket})
+        .done(function() {
+          $('#wizard').fadeOut(300);
+          $('.success-message').delay(300).fadeIn(300);
+        }).fail(function() {
+          $('#wizard').fadeOut(300);
+          $('.unsuccess-message').delay(300).fadeIn(300);
+        });
       },
 
 	  //Event happens before finishing all the steps
 	  onFinishing: function (event, currentIndex) { 
-		return true;
+      return true;
 		//Fifth
 		/*
 		if(currentIndex == 4){
@@ -91,6 +99,7 @@ $(function ()
 			}
 		}*/
 	}
+
 });
 
 
@@ -236,4 +245,15 @@ $(function() {
 		hoverDelay : 75
 	}); } );
 
+    $.post( "contactengine.php", { Name: name, Email: email, Message: message })
+    .done(function() {
+     $('#contact-area').fadeOut(300, function() {
+      $('.success-message').fadeIn(300);
+    });
+   }).fail(function() {
+     $('#contact-area').fadeOut(300, function() {
+      $('.unsuccess-message').fadeIn(300);
+    });
+   });
+ }
 });

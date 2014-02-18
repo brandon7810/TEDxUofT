@@ -273,7 +273,8 @@ position: absolute;
     left: 0;
 	text-align:center;
 	width:100%;
-	color: #bbb;
+	color: #ddd;
+	font-size:85%;
 	opacity:1;
 }
 
@@ -385,10 +386,10 @@ position: absolute;
     position:fixed;
     top:-130px;
     width: 118%;
-    height: 200px;
+    height: 300px;
     left:-10%;
     background-image: url("../img/About_illustration.png");
-    background-position-y: 80%;
+    background-position-y: -140px;
     background-size: cover;
 }
 
@@ -407,6 +408,15 @@ position: absolute;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    margin-top: 10%;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 400px;
+	font-family: 'HelveticaNeueLight', Calibri, Arial, sans-serif;
+	margin: 5px 0px 10px 0px;
+	border: 1px solid #ddd;
     outline: none;
     -webkit-transition: box-shadow 0.3s;
     -moz-transition: box-shadow 0.3s;
