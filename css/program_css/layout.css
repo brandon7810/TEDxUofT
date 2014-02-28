@@ -1,0 +1,94 @@
+.logo {
+    padding: .3em 7em 0em 7em;
+}
+
+.pageTitle {
+	text-align:center;
+	padding-bottom:1em;
+}
+
+.center {
+    text-align:center;
+}
+
+.speaker {
+	background-color: #FF2B06;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.speaker_image {
+	opacity:.8;
+	width: 100%;
+}
+
+
+.one {
+	opacity:1;
+}
+
+.two {
+	opacity:.98;
+}
+
+.three {
+	opacity:.96;
+}
+
+.four {
+	opacity:.94;
+}
+
+.five {
+	opacity:.92;
+}
+
+.six {
+	opacity:.90;
+}
+
+.seven {
+	opacity:.88;
+}
+
+.eight {
+	opacity:.86;
+}
+
+.nine {
+	opacity:.84;
+}
+
+.ten {
+	opacity:.82;
+}
+
+.eleven {
+	opacity:.80;
+}
+
+.twelve {
+	opacity:.78;
+}
+
+.thirteen {
+	opacity:.76;
+}
+
+.fourteen {
+	opacity:.74;
+}
+
+.fifteen {
+	opacity:.72;
+}
+
+.sixteen {
+	opacity:.70;
+}
+
+.afterparty {
+	background:black;
+}
+
+
