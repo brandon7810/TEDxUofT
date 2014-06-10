@@ -1,14 +1,15 @@
-.top-bar{
-	background-color: #FFF;
-	box-shadow: 0 4px 15px -6px #ddd;
-	height: 60px;
-}
-.page-title{
-	padding-bottom: 5px;
-	border-bottom: 1px solid #ddd;
-}
 .logo {
     padding: .3em 7em 0em 7em;
+}
+
+.pageTitle {
+	text-align:center;
+	padding-bottom:1em;
+}
+
+h2 span {
+	color: #FF2B06;
+	font-weight:400;
 }
 
 .center {
@@ -16,14 +17,14 @@
 }
 
 .speaker {
-	background-color: #FF2B06;
 	padding-top: .5em;
 	padding-bottom: .5em;
 }
 
 .speaker_image {
 	opacity:.8;
-	width: 100%;
+	width:50%
+	text-align: right;
 }
 
 
