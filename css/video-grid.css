@@ -65,7 +65,7 @@
 }
 
 .grid figcaption {
-	background: #e4e4e4;
+	background: #fff;
 	padding: 1em;
 }
 
@@ -80,7 +80,7 @@
 	z-index: 500;
 	opacity: 0;
 	visibility: hidden;
-	overflow:visible;
+	overflow: visible;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
 	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;

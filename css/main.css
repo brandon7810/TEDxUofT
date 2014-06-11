@@ -283,8 +283,8 @@ p {
 .black-banner {
 	width: 100%;
 	z-index: 1000;
-	position: absolute;
-	top: 80%;
+	position:absolute;
+	top: 89%;
 	background-color: #000;
 	border-top:3px solid #FF2B06;
 }
@@ -293,7 +293,7 @@ p {
 	color:#fff;
 	text-align:center;
 	vertical-align:middle;
-	opacity:.85;
+	opacity:.9;
 	font-weight:400;
 }	
 
@@ -323,7 +323,7 @@ p {
 .about_img {
 	position:absolute;
 	width:116%;
-	bottom:17em;
+	bottom:1em;
 	left:-10%;
 }
 
@@ -352,7 +352,15 @@ p {
 /* FAQ Page */
 .pt-page-4 {
     background: #FFF;
+		overflow:scroll;
+		height:100%;
 }
+
+.pt-page-8 {
+	overflow:scroll;
+	height:80%;
+}
+
 .description-ted-heading{
     font-weight: 600;
 }
