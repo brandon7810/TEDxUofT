@@ -211,7 +211,7 @@ $(function ()
 		//Event happens after finishing all the steps
 		onFinished: function (event, currentIndex) {  
 
-	
+			/*
 			console.log(
 				"position:" + position + "\n" + "name:" + name + "\n" + "email:" + email + "\n" + 
 				"phone:" + phone + "\n" + "year:" + year + "\n" + "title:" + title + "\n" +
@@ -223,11 +223,14 @@ $(function ()
 			
 			$('#wizard').fadeOut(300, function() {
 				$('#wizard-success').fadeIn(300);
-			});
+			});*/
 			
 			
-			/*
-			    $.post( "php/applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus})
+
+			
+			
+			    $.post( "php/applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Title: title, Year:year, Position: position,
+				Q1_ans: q1_ans, Q2_ans: q2_ans, Q3_ans: q3_ans, Q4_ans: q4_ans, Q5_ans: q5_ans, Q6_ans: q6_ans, Q7_ans: q7_ans, Q8_ans: q8_ans, Q9_ans: q9_ans })
 						.done(function( data ) {
 							$('#wizard').fadeOut(300, function() {
 								$('#wizard-success').fadeIn(300);
@@ -239,7 +242,7 @@ $(function ()
 							});
 						});
 			
-			*/
+			
 
 		},
 
