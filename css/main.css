@@ -82,9 +82,14 @@ body {
 }
 
 p {
-    font-size: .8em;
+    font-size: 1em;
     line-height: 25px;
     margin-top: 0
+}
+
+h2 span {
+    font-weight: 300;
+    color: #FF2B06;
 }
 
 .pt-wrapper {
@@ -103,7 +108,7 @@ p {
     top: 0;
     left: 0;
     visibility: hidden;
-    overflow: scroll;
+    overflow: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -250,8 +255,8 @@ p {
 	position: absolute;
 	right:65px;
 	width:342px;
-  height:65%;
-  margin-top: 7%;
+    height:65%;
+    margin-top: 7%;
 }
 
 .theme-description-title {
@@ -593,8 +598,11 @@ p {
     font-size: 1.5em;
 }
 #apply-area {
-	padding:5% 12% 5% 8%;
+	padding:5% 15% 0% 22%;
+    margin-bottom: 15%;
 	text-align:center;
+    width: 100%;
+    height: 100%;
 }
 
 #apply-area label span {
@@ -676,10 +684,11 @@ p {
 .position-choice{
 	display: inline-block;
 	width: 300px;
-	height: 30px;
+	height: 3.5em;
     border: 1px solid #4C4C4C;
     border-radius: 5px;
     color: #4C4C4C;
+    padding: 1em 0;
 	margin: 10px;
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
@@ -709,6 +718,10 @@ p {
 /* Wizard */
 .content{
     margin-top: 5%;
+}
+
+.wizard section {
+    margin-top: 1em;
 }
 
 .wizard > .steps
@@ -800,11 +813,11 @@ p {
     color: #fff;
 }
 
-.wizard > .content
-{
+.wizard > .content {
     display: block;
-    margin: 0.5em;
-    min-height: 300px;
+    margin: 0em;
+    height: 100%;
+    min-height: 30em;
     overflow: hidden;
     position: relative;
     width: auto;
@@ -813,16 +826,14 @@ p {
     border-radius: 5px;
 }
 
-.wizard.vertical > .content
-{
+.wizard.vertical > .content{
     display: inline;
     float: left;
     margin: 0 2.5% 0.5em 2.5%;
     width: 65%;
 }
 
-.wizard > .content > .body
-{
+.wizard > .content > .body{
     float: left;
     position: absolute;
     width: 95%;
