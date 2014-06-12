@@ -103,7 +103,7 @@ p {
     top: 0;
     left: 0;
     visibility: hidden;
-    overflow: ;
+    overflow: scroll;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -141,7 +141,7 @@ p {
     width: 100%;
     cursor: pointer;
     display: block;
-		font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     outline: none;
     background: rgba(0,0,0,0);
     -webkit-transition: all 0.3s;
@@ -235,8 +235,8 @@ p {
 
 /* Page 1 - Home */
 .pt-page-1 {
-  background: #FFF;
-	overflow: scroll;
+    background: #FFF;
+    overflow: ;
 }
 .tedx-logo {
     background: url("../img/TEDx_logo.png") no-repeat;
