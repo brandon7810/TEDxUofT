@@ -1,8 +1,265 @@
 $(function ()
 { 
 
-  var name, email, phone, occupation, party_ticket, campus, message, additional_info, dietary_res;
+	var position, phone, name, title, email, occupation, year, q1_ans, q2_ans, q3_ans, q4_ans, q5_ans, q6_ans, q7_ans, q8_ans, q9_ans;
+	
+	$(document).ready(function(){
+		//position choice 		
+		$('.position-choice').hover(
+			function() {
+				var is_click = $(this).data("click");
+				if(!is_click){
+					$(this).css("color", "#FF2B06");
+					$(this).css("border-color", "#FF2B06");
+				}
+			},function() {
+				var is_click = $(this).data("click");
+				if(!is_click){
+					$(this).css("color", "#4C4C4C");
+					$(this).css("border-color", "#4C4C4C");								
+				}
+		});
+		
+		$('.position-choice').click(function(){
+			var this_color = $(this).css("background-color");
+			$('.position-choice').css("color", "#4C4C4C");
+			$('.position-choice').css("border-color", "#4C4C4C");	
+			$('.position-choice').css("background-color", "white");
+			$('.position-choice').data("click",false);
+			
+			position = null; 
+			
+			if(this_color != "rgb(255, 0, 0)") {		
+				$(this).animate({ "background-color": "red",  "color": "white" }, "fast");	
+				$(this).css("border", "1px solid white");
+				
+				$(this).data("click",true);
+				position = $(this).attr("name");
+			}
+		});
+		//end position choice
 
+	}); //end document 
+
+ $("#wizard").steps({
+ 
+    headerTag: "h2",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+
+
+    //Events happen in different step
+    onStepChanging: function (event, currentIndex, priorIndex) { 
+        var newIndex = priorIndex;
+		var cha_len = 0;
+		
+        //Finishing 1 step
+        if(newIndex == 1){
+			return true;
+        }
+		
+		//Finishing 2 step
+        if(newIndex == 2){
+			if(position){
+				return true;
+			}else{
+				alert("Hey! Choose one!");
+				return false;
+			}
+			
+        }
+		
+
+		
+		//Finishing 3 step
+        if(newIndex == 3){
+			name = $('#applyName').val();
+			email = $('#applyEmail').val();
+			phone = $('#Phone').val();
+			
+			if(name.length == 0){
+				$('#applyName').css('border-bottom','1px solid #FF2B06');
+			return false;
+			} else if (email.length == 0){
+				$('#applyEmail').css('border-bottom','1px solid #FF2B06');
+			} else {
+				return true;
+			}
+        }
+		
+		//Finishing 4 step
+        if(newIndex == 4){
+			year = $('#Year').val();
+			title = $('#Title').val();
+			occupation = $('#Occupation').val();
+			
+			if(year.length == 0){
+				$('#Year').css('border-bottom','1px solid #FF2B06');
+			return false;
+			} else if (title.length == 0){
+				$('#Title').css('border-bottom','1px solid #FF2B06');
+			}else if (occupation.length == 0){
+				$('#Occupation').css('border-bottom','1px solid #FF2B06');
+			}
+
+			else {
+				return true;
+			}
+			
+        }				
+		
+		
+		//Finishing 5 step
+        if(newIndex == 5){
+			q1_ans = $('#q1_ans').val();
+			cha_len = q1_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 6 step
+        if(newIndex == 6){
+            q2_ans = $('#q2_ans').val();
+			cha_len = q2_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 7 step
+        if(newIndex == 7){
+            q3_ans = $('#q3_ans').val();
+			cha_len = q3_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 8 step
+        if(newIndex == 8){
+            q4_ans = $('#q4_ans').val();
+			cha_len = q4_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 9 step
+        if(newIndex == 9){
+            q5_ans = $('#q5_ans').val();
+			cha_len = q5_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 10 step
+        if(newIndex == 10){
+            q6_ans = $('#q6_ans').val();
+			cha_len = q6_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 11 step
+        if(newIndex == 11){
+            q7_ans = $('#q7_ans').val();
+			cha_len = q7_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+		//Finishing 12 step
+        if(newIndex == 12){
+            q8_ans = $('#q8_ans').val();
+			cha_len = q8_ans.length;
+
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+        }
+		
+
+    },   
+	
+		//Event happens after finishing all the steps
+		onFinished: function (event, currentIndex) {  
+
+			/* 
+			console.log(
+				"position:" + position + "\n" + "name:" + name + "\n" + "email:" + email + "\n" + 
+				"phone:" + phone + "\n" + "year:" + year + "\n" + "title:" + title + "\n" +
+				"occupation:" + occupation + "\n" + "utm:" + utm_bool + "\n" + "utsc:" + utsc_bool + "\n" +
+				"utsg:" + utsg_bool + "\n" + "other camp:" + other_bool + "\n" + "q1:" + q1_ans + "\n" +
+				"q2:" + q2_ans + "\n" + "q3:" + q3_ans + "\n" + "q4:" + q4_ans + "\n" + "q5:" + q5_ans + "\n" +
+				"q6:" + q6_ans + "\n" + "q7:" + q7_ans + "\n" + "q8:" + q8_ans + "\n" + "q9:" + q9_ans + "\n"
+			);
+			*/
+			
+			    $.post( "php/applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus})
+						.done(function( data ) {
+							$('#wizard').fadeOut(300, function() {
+								$('#wizard-success').fadeIn(300);
+							});
+						}) 
+						.fail(function() {
+							$('#wizard').fadeOut(300, function() {
+								$('#wizard-success').fadeIn(300);
+							});
+						});
+			
+			
+			
+			return false;
+
+		},
+
+		//Event happens before finishing all the steps
+		onFinishing: function (event, currentIndex) { 
+           
+			q9_ans = $('#q9_ans').val();
+			cha_len = q9_ans.length;
+			
+			if(cha_len<20){
+				alert("Come on! Give us more info about you!");
+				return false;
+			}
+            else {return true;}
+
+		
+		}
+});	
+	
+	
+
+  //var name, email, phone, occupation, party_ticket, campus, message, additional_info, dietary_res;
+   /*
   $("#wizard").steps({
     headerTag: "h2",
     bodyTag: "section",
@@ -68,7 +325,7 @@ $(function ()
     
     window.location.href = "mailto:applications.tedxuoft@gmail.com?Subject=Application Submission&body=" + body;
     */
-    
+    /*
     $.post( "php/applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Dietary_res: dietary_res, Message: message, Additional_info:additional_info, Party_ticket: party_ticket  })
       .done(function( data ) {
         $('#wizard').fadeOut(300, function() {
@@ -90,10 +347,10 @@ $(function ()
         return true;
       }
     }*/
+	/*
   }
 });
-
-
+*/
 var max_count = 200;
 var wordCounts = {};
 
