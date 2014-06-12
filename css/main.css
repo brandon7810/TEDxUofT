@@ -962,10 +962,14 @@ h2 span {
 }
 
 .success-message{
+	padding-top: 10%;
     display: none;
+	height: 200px;
 }
 .unsuccess-message{
+	padding-top: 10%;
     display: none;
+	height: 200px;
 }
 
 .wizard > .loading
