@@ -232,12 +232,6 @@ h2 span {
 .pull-left { float: left }
 .pull-right { float: right }
 
-.icomoon-prev:before {
-    font-family: 'icomoon';
-    content: "\e003";
-    margin: 0 4px;
-}
-
 /* Page 1 - Home */
 .pt-page-1 {
     background: #FFF;
@@ -697,7 +691,7 @@ h2 span {
 
 .wizard-message{
     width: 100%;
-    height: 100%;
+    height: 85%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -716,7 +710,6 @@ h2 span {
 
 /* Wizard */
 .content{
-    margin-top: 5%;
 }
 
 .wizard section {
@@ -816,7 +809,7 @@ h2 span {
     display: block;
     margin: 0;
     height: 100%;
-    min-height: 30em;
+    min-height: 28em;
     overflow: hidden;
     position: relative;
     width: auto;
@@ -837,7 +830,7 @@ h2 span {
     position: absolute;
     width: 95%;
     height: 95%;
-    padding: 5% 2.5%;
+    padding: 5% 2.5% 10% 2.5%;
 }
 
 .wizard > .content > .body ul
@@ -911,7 +904,7 @@ h2 span {
 {
     display: inline;
     float: right;
-    margin: 0 2.5%;
+    margin: 0 10%;
     width: 95%;
 }
 
