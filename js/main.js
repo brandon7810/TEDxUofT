@@ -238,7 +238,7 @@ $(function ()
 						}) 
 						.fail(function() {
 							$('#wizard').fadeOut(300, function() {
-								$('#wizard-success').fadeIn(300);
+								$('#wizard-unsuccess').fadeIn(300);
 							});
 						});
 			

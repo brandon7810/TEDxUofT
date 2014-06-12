@@ -50,7 +50,7 @@ $Body .= "Phone: ";
 $Body .= $Phone;
 $Body .= " \n";
 
-$Body .= "Occupation: ";
+$Body .= "Study program: ";
 $Body .= $Occupation;
 $Body .= " \n";
 
@@ -70,39 +70,39 @@ $Body .= "Position: ";
 $Body .= $Position;
 $Body .= " \n";
 
-$Body .= "Q1_ans: ";
+$Body .= "Q1_anser: ";
 $Body .= $Q1_ans;
 $Body .= " \n";
 
-$Body .= "Q2_ans: ";
+$Body .= "Q2_anser: ";
 $Body .= $Q2_ans;
 $Body .= " \n";
 
-$Body .= "Q3_ans: ";
+$Body .= "Q3_anser: ";
 $Body .= $Q3_ans;
 $Body .= " \n";
 
-$Body .= "Q4_ans: ";
+$Body .= "Q4_anser: ";
 $Body .= $Q4_ans;
 $Body .= " \n";
 
-$Body .= "Q5_ans: ";
+$Body .= "Q5_anser: ";
 $Body .= $Q5_ans;
 $Body .= " \n";
 
-$Body .= "Q6_ans: ";
+$Body .= "Q6_anser: ";
 $Body .= $Q6_ans;
 $Body .= " \n";
 
-$Body .= "Q7_ans: ";
+$Body .= "Q7_anser: ";
 $Body .= $Q7_ans;
 $Body .= " \n";
 
-$Body .= "Q8_ans: ";
+$Body .= "Q8_anser: ";
 $Body .= $Q8_ans;
 $Body .= " \n";
 
-$Body .= "Q9_ans: ";
+$Body .= "Q9_anser: ";
 $Body .= $Q9_ans;
 $Body .= " \n";
 
