@@ -66,6 +66,9 @@ $(function ()
 					$('#position-info').text("Creates the social media strategy, maintaining a constant social media presence on Twitter, Facebook, and Instagram.\
 						Responsible for creating the promotion schedule for speakers, conference, and videos.").fadeIn(500);
 					break;
+				case "External Affairs Manager":
+					$('#position-info').text("Communicates with external partners who provide funding and in-kind services for the conference. Assists the Director of Partnerships.").fadeIn(500);
+					break;
 				default:
 					$('#position-info').text("").hide();
 					break;				
