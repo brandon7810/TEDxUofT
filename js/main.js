@@ -5,18 +5,23 @@ $(function ()
 	
 	$(document).ready(function(){
 		//position choice 		
+		
 		$('.position-choice').hover(
 			function() {
 				var is_click = $(this).data("click");
 				if(!is_click){
 					$(this).css("color", "#FF2B06");
 					$(this).css("border-color", "#FF2B06");
+					var job_title = $(this).attr("name");
+					showJobInfo(job_title);
 				}
 			},function() {
 				var is_click = $(this).data("click");
 				if(!is_click){
 					$(this).css("color", "#4C4C4C");
-					$(this).css("border-color", "#4C4C4C");								
+					$(this).css("border-color", "#4C4C4C");	
+					$('#position-info').text("").hide();
+					showJobInfo(position);
 				}
 		});
 		
@@ -27,16 +32,46 @@ $(function ()
 			$('.position-choice').css("background-color", "white");
 			$('.position-choice').data("click",false);
 			
+			
 			position = null; 
 			
 			if(this_color != "rgb(255, 0, 0)") {		
 				$(this).animate({ "background-color": "red",  "color": "white" }, "fast");	
 				$(this).css("border", "1px solid white");
-				
 				$(this).data("click",true);
 				position = $(this).attr("name");
 			}
 		});
+		
+		function showJobInfo(job){
+			switch(job){
+				case "Junior Designer":
+					$('#position-info').text("Assists the Creative Director in the design and creation of marketing materials.").fadeIn(500);
+					break;
+				case "Junior Developer":
+					$('#position-info').text("Maintains the website, and coding as per the vision of the Creative Director.").fadeIn(500);
+					break;
+				case "Speaker Relations Manager":
+					$('#position-info').text("Ensures positive speaker experience before, during and after the event. \
+						Manages and coordinates all speakers and emcees, showcases, rehearsals, day of show arrival, preparation and post talk experience. Acquires speaker presentations prior to the event.").fadeIn(500);
+					break;
+				case "Funds Manager":
+					$('#position-info').text("Ensures the event maintains a balanced budget and that all funds are received, processed and accounted for.\
+						Responsible for sales, budget forecasting, and the completion of post-event reports to all sponsors.").fadeIn(500);
+					break;
+				case "Campus Ambassadors":
+					$('#position-info').text("Coordinates with residences to arrange live stream parties, as well as create awareness for TED, TEDx and TEDxUofT at each University of Toronto Campus.").fadeIn(500);
+					break;
+				case "Social Media Specialist":
+					$('#position-info').text("Creates the social media strategy, maintaining a constant social media presence on Twitter, Facebook, and Instagram.\
+						Responsible for creating the promotion schedule for speakers, conference, and videos.").fadeIn(500);
+					break;
+				default:
+					$('#position-info').text("").hide();
+					break;				
+			}
+		}
+		
 		//end position choice
 
 	}); //end document 
@@ -229,7 +264,7 @@ $(function ()
 
 			
 			
-			    $.post( "php/applyengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Title: title, Year:year, Position: position,
+			    $.post( "php/hiringengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Title: title, Year:year, Position: position,
 				Q1_ans: q1_ans, Q2_ans: q2_ans, Q3_ans: q3_ans, Q4_ans: q4_ans, Q5_ans: q5_ans, Q6_ans: q6_ans, Q7_ans: q7_ans, Q8_ans: q8_ans, Q9_ans: q9_ans })
 						.done(function( data ) {
 							$('#wizard').fadeOut(300, function() {
