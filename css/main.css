@@ -323,7 +323,7 @@ h2 span {
 .about_img {
 	position:absolute;
 	width:116%;
-	bottom:1em;
+	bottom:-15em;
 	left:-10%;
 }
 
@@ -601,6 +601,7 @@ h2 span {
 #apply-area label span {
     color:#FF2B06;
     font-weight:300;
+    text-align: center;
 }
 .apply_illustration {
     width:100%;
