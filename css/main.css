@@ -40,7 +40,7 @@ body.loading .modal {
 
 .btn {
     border: none;
-		font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: inherit;
     color: #A8A8A8;
     background: none;
@@ -60,6 +60,10 @@ body.loading .modal {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+.btn span {
+    color: #FF2B06;
 }
 
 .hidden { display: none !important }
@@ -131,7 +135,7 @@ h2 span {
 
 .pt-trigger-container {
     position: absolute;
-    width: 135px;
+    width: 200px;
     z-index: 200;
     margin-top: 16%;
 }
@@ -175,10 +179,13 @@ h2 span {
 	border-bottom-right-radius: .2em;
 }
 
+.pt-trigger:hover span {
+    color: #FFF;
+}
+
 .pt-trigger:hover,
 .pt-trigger:active {
     color: #FFF;
-	
 }
 
 .pt-trigger:hover:after,
