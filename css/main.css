@@ -66,6 +66,13 @@ body.loading .modal {
     color: #FF2B06;
 }
 
+#Hiring_btn{
+	background-image:url('../img/symbol_new1.png');
+	background-repeat:no-repeat;
+	background-position: 100% top;
+}
+
+
 .hidden { display: none !important }
 .red { color: #FF2B06 }
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */

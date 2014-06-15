@@ -74,8 +74,11 @@ $(function ()
 					break;				
 			}
 		}
-		
 		//end position choice
+		
+		$('#Hiring_btn').click(function(){
+			$('#Hiring_btn').css("background-image", "none");
+		});
 
 	}); //end document 
 
