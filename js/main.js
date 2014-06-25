@@ -4,8 +4,26 @@ $(function ()
 	var position, phone, name, title, email, occupation, year, q1_ans, q2_ans, q3_ans, q4_ans, q5_ans, q6_ans, q7_ans, q8_ans, q9_ans;
 	
 	$(document).ready(function(){
-		//position choice 		
+	
+		//Load local storage
 		
+		//if (typeof(Storage) != "undefined") {};
+		
+		if (typeof(Storage) != "undefined") {
+			
+			//Show/hide hiring new notification
+			if (localStorage.hiring_new) {
+				localStorage.hiring_new = false;	
+				$('#Hiring_btn').css("background-image", "none");
+			} else {
+				localStorage.hiring_new = true;
+			}
+
+		} else {
+			alert("Sorry, your browser does not support Web Storage...");
+		}
+		
+		//position choice 		
 		$('.position-choice').hover(
 			function() {
 				var is_click = $(this).data("click");
@@ -26,12 +44,12 @@ $(function ()
 		});
 		
 		$('.position-choice').click(function(){
+			if (typeof(Storage) != "undefined") {localStorage.position=null};
 			var this_color = $(this).css("background-color");
 			$('.position-choice').css("color", "#4C4C4C");
 			$('.position-choice').css("border-color", "#4C4C4C");	
 			$('.position-choice').css("background-color", "white");
 			$('.position-choice').data("click",false);
-			
 			
 			position = null; 
 			
@@ -40,6 +58,7 @@ $(function ()
 				$(this).css("border", "1px solid white");
 				$(this).data("click",true);
 				position = $(this).attr("name");
+				if (typeof(Storage) != "undefined") {localStorage.position=position};
 			}
 		});
 		
@@ -76,9 +95,51 @@ $(function ()
 		}
 		//end position choice
 		
+		//New notification on the hiring button
 		$('#Hiring_btn').click(function(){
 			$('#Hiring_btn').css("background-image", "none");
+			if (typeof(Storage) != "undefined") {localStorage.hiring_new = false;}
 		});
+		
+		//Listeners for storing text area ans in the form
+		if (typeof(Storage) != "undefined") {
+			//Save q1_ans
+			$('#q1_ans').bind('input propertychange', function() {
+				localStorage.q1_ans = $('#q1_ans').val();
+			});
+			//Save q2_ans
+			$('#q2_ans').bind('input propertychange', function() {
+				localStorage.q2_ans = $('#q2_ans').val();
+			});
+			//Save q3_ans
+			$('#q3_ans').bind('input propertychange', function() {
+				localStorage.q3_ans = $('#q3_ans').val();
+			});
+			//Save q4_ans
+			$('#q4_ans').bind('input propertychange', function() {
+				localStorage.q4_ans = $('#q4_ans').val();
+			});
+			//Save q5_ans
+			$('#q5_ans').bind('input propertychange', function() {
+				localStorage.q5_ans = $('#q5_ans').val();
+			});		
+			//Save q6_ans
+			$('#q6_ans').bind('input propertychange', function() {
+				localStorage.q6_ans = $('#q6_ans').val();
+			});	
+			//Save q7_ans
+			$('#q7_ans').bind('input propertychange', function() {
+				localStorage.q7_ans = $('#q7_ans').val();
+			});	
+			//Save q8_ans
+			$('#q8_ans').bind('input propertychange', function() {
+				localStorage.q8_ans = $('#q8_ans').val();
+			});	
+			//Save q9_ans
+			$('#q9_ans').bind('input propertychange', function() {
+				localStorage.q9_ans = $('#q9_ans').val();
+			});				
+		};
 
 	}); //end document 
 
@@ -87,8 +148,7 @@ $(function ()
     headerTag: "h2",
     bodyTag: "section",
     transitionEffect: "slideLeft",
-
-
+	
     //Events happen in different step
     onStepChanging: function (event, currentIndex, priorIndex) { 
         var newIndex = priorIndex;
@@ -96,11 +156,40 @@ $(function ()
 		
         //Finishing 1 step
         if(newIndex == 1){
+		
+			//Load position
+			if (typeof(Storage) != "undefined") {
+				if(localStorage.position){
+					var p = "[name='"+ localStorage.position+ "']" ;
+					var chosen_position = $(p)[0];
+					if(!position){
+						$(chosen_position).click();
+					}
+				}
+			};
+
 			return true;
         }
 		
 		//Finishing 2 step
         if(newIndex == 2){
+		
+			//Load local apply name
+			if (typeof(Storage) != "undefined") {
+				if(localStorage.applyName){			
+					$('#applyName').val(localStorage.applyName);
+				}
+				if(localStorage.applyEmail){			
+					$('#applyEmail').val(localStorage.applyEmail);
+				}
+				if(localStorage.Phone){			
+					$('#Phone').val(localStorage.Phone);
+				}
+				$('#local_support').text("PS: All the Input will be saved locally on your machine!").fadeIn(500);
+			}else{
+				$('#local_support').text("Sorry. Your broswer does not support local storage. Every input not saved will be lost.").fadeIn(500);
+			};
+		
 			if(position){
 				return true;
 			}else{
@@ -109,8 +198,6 @@ $(function ()
 			}
 			
         }
-		
-
 		
 		//Finishing 3 step
         if(newIndex == 3){
@@ -124,6 +211,41 @@ $(function ()
 			} else if (email.length == 0){
 				$('#applyEmail').css('border-bottom','1px solid #FF2B06');
 			} else {
+				
+				
+				if (typeof(Storage) != "undefined") {
+					//Save name, email, phone local
+					localStorage.applyName = $('#applyName').val();
+					localStorage.applyEmail = $('#applyEmail').val();
+					localStorage.Phone = $('#Phone').val();			
+
+					//Load year, titie, occu
+					if(localStorage.Year){			
+						$('#Year').val(localStorage.Year);
+					}
+					if(localStorage.Title){			
+						$('#Title').val(localStorage.Title);
+					}
+					if(localStorage.Occupation){			
+						$('#Occupation').val(localStorage.Occupation);
+					}
+					if(localStorage.campus){
+						switch(localStorage.campus){
+							case "UTM":
+								$("#campus_utm").click();
+								break;
+							case "UTSG":
+								$("#campus_utsg").click();
+								break;
+							case "UTSC":
+								$("#campus_utsc").click();
+								break;
+							case "Other":
+								$("#campus_other").click();
+								break;
+						}
+					}
+				}
 				return true;
 			}
         }
@@ -141,9 +263,19 @@ $(function ()
 				$('#Title').css('border-bottom','1px solid #FF2B06');
 			}else if (occupation.length == 0){
 				$('#Occupation').css('border-bottom','1px solid #FF2B06');
-			}
-
-			else {
+			}else {
+			
+				if (typeof(Storage) != "undefined") {
+					//Save year, title, occu
+					localStorage.Year = $('#Year').val();
+					localStorage.Title = $('#Title').val();
+					localStorage.Occupation = $('#Occupation').val();			
+					
+					//Load q1_ans
+					if(localStorage.q1_ans){
+						$('#q1_ans').val(localStorage.q1_ans);
+					}
+				}
 				return true;
 			}
 			
@@ -159,7 +291,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q2_ans
+					if(localStorage.q2_ans){
+						$('#q2_ans').val(localStorage.q2_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 6 step
@@ -171,7 +311,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {	
+					//Load q3_ans
+					if(localStorage.q3_ans){
+						$('#q3_ans').val(localStorage.q3_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 7 step
@@ -183,7 +331,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q4_ans
+					if(localStorage.q4_ans){
+						$('#q4_ans').val(localStorage.q4_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 8 step
@@ -195,7 +351,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q5_ans
+					if(localStorage.q5_ans){
+						$('#q5_ans').val(localStorage.q5_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 9 step
@@ -207,7 +371,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q6_ans
+					if(localStorage.q6_ans){
+						$('#q6_ans').val(localStorage.q6_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 10 step
@@ -219,7 +391,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q7_ans
+					if(localStorage.q7_ans){
+						$('#q7_ans').val(localStorage.q7_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 11 step
@@ -231,7 +411,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q8_ans
+					if(localStorage.q8_ans){
+						$('#q8_ans').val(localStorage.q8_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 		//Finishing 12 step
@@ -243,7 +431,15 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				if (typeof(Storage) != "undefined") {
+					//Load q9_ans
+					if(localStorage.q9_ans){
+						$('#q9_ans').val(localStorage.q9_ans);
+					}
+				}
+				return true;
+			}
         }
 		
 
@@ -265,25 +461,25 @@ $(function ()
 			$('#wizard').fadeOut(300, function() {
 				$('#wizard-success').fadeIn(300);
 			});*/
-			
-			
 
-			
-			
 			    $.post( "php/hiringengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Title: title, Year:year, Position: position,
 				Q1_ans: q1_ans, Q2_ans: q2_ans, Q3_ans: q3_ans, Q4_ans: q4_ans, Q5_ans: q5_ans, Q6_ans: q6_ans, Q7_ans: q7_ans, Q8_ans: q8_ans, Q9_ans: q9_ans })
 						.done(function( data ) {
 							$('#wizard').fadeOut(300, function() {
 								$('#wizard-success').fadeIn(300);
 							});
+							
+							if (typeof(Storage) != "undefined") {
+								localStorage.clear();
+								localStorage.hiring_new = false;
+							}
+							
 						}) 
 						.fail(function() {
 							$('#wizard').fadeOut(300, function() {
 								$('#wizard-unsuccess').fadeIn(300);
 							});
 						});
-			
-			
 
 		},
 
@@ -297,7 +493,9 @@ $(function ()
 				alert("Come on! Give us more info about you!");
 				return false;
 			}
-            else {return true;}
+            else {
+				return true;
+			}
 
 		
 		}
@@ -420,6 +618,7 @@ var utsg_bool = false;
 var other_bool = false;
 $("#campus_utm").click(function(event) {
   campus = "UTM";
+  if (typeof(Storage) != "undefined") {localStorage.campus = campus;}
   utm_bool = true;
   $("#campus_utm").css('background','#FF2B06');
   $("#campus_utm").css('color','white');
@@ -435,6 +634,7 @@ $("#campus_utm").click(function(event) {
 });
 $("#campus_utsg").click(function(event) {
   campus = "UTSG";
+  if (typeof(Storage) != "undefined") {localStorage.campus = campus;}
   utm_bool = false;
   $("#campus_utm").css('background','white');
   $("#campus_utm").css('color','#FF2B06');
@@ -450,6 +650,7 @@ $("#campus_utsg").click(function(event) {
 });
 $("#campus_utsc").click(function(event) {
   campus = "UTSC";
+  if (typeof(Storage) != "undefined") {localStorage.campus = campus;}
   utm_bool = false;
   $("#campus_utm").css('background','white');
   $("#campus_utm").css('color','#FF2B06');
@@ -465,6 +666,7 @@ $("#campus_utsc").click(function(event) {
 });
 $("#campus_other").click(function(event) {
   campus = "Other";
+  if (typeof(Storage) != "undefined") {localStorage.campus = campus;}
   utm_bool = false;
   $("#campus_utm").css('background','white');
   $("#campus_utm").css('color','#FF2B06');
