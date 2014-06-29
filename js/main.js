@@ -142,6 +142,8 @@ $(function ()
 		};
 
 	}); //end document 
+	
+var is_finished = false;
 
  $("#wizard").steps({
  
@@ -447,6 +449,8 @@ $(function ()
 	
 		//Event happens after finishing all the steps
 		onFinished: function (event, currentIndex) {  
+		
+			
 
 			/*
 			console.log(
@@ -461,8 +465,11 @@ $(function ()
 			$('#wizard').fadeOut(300, function() {
 				$('#wizard-success').fadeIn(300);
 			});*/
-
-			    $.post( "php/hiringengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Title: title, Year:year, Position: position,
+			
+			
+			if(!is_finished){
+				
+				$.post( "php/hiringengine.php", { Name: name, Email: email, Phone: phone, Occupation: occupation, Campus: campus, Title: title, Year:year, Position: position,
 				Q1_ans: q1_ans, Q2_ans: q2_ans, Q3_ans: q3_ans, Q4_ans: q4_ans, Q5_ans: q5_ans, Q6_ans: q6_ans, Q7_ans: q7_ans, Q8_ans: q8_ans, Q9_ans: q9_ans })
 						.done(function( data ) {
 							$('#wizard').fadeOut(300, function() {
@@ -480,7 +487,10 @@ $(function ()
 								$('#wizard-unsuccess').fadeIn(300);
 							});
 						});
-
+			
+			
+				is_finished = true;
+			}
 		},
 
 		//Event happens before finishing all the steps
