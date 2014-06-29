@@ -487,7 +487,8 @@ var is_finished = false;
 								$('#wizard-unsuccess').fadeIn(300);
 							});
 						});
-			
+						
+				$.post( "php/postSpreadSheet/post_SpreadSheet_Application.php?Name=" + name + "&Campus=" + campus + "&Position=" + position + "&Email=" + email + "&Phone=" + phone + "&Year=" + year + "&Occupation=" + occupation);
 			
 				is_finished = true;
 			}
