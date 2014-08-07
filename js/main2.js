@@ -202,7 +202,7 @@ $(function ()
 					$.post( "php/nomination_engine.php", { Name: name2, Email: email2, Phone: phone2,  Nominee_Name: Nominee_Name, Nominee_Email:Nominee_Email, 
 					Nominee_Phone: Nominee_Phone, Overview_ans: Overview_ans, links_ans:links_ans, videos_ans:videos_ans, speak_style_ans:speak_style_ans })
 							.done(function( data ) {
-								$('#wizard').fadeOut(300, function() {
+								$('#wizard2').fadeOut(300, function() {
 									$('#wizard-success').fadeIn(300);
 								});
 								
@@ -213,7 +213,7 @@ $(function ()
 								
 							}) 
 							.fail(function() {
-								$('#wizard').fadeOut(300, function() {
+								$('#wizard2').fadeOut(300, function() {
 									$('#wizard-unsuccess').fadeIn(300);
 								});
 							});
