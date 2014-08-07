@@ -203,7 +203,7 @@ $(function ()
 					Nominee_Phone: Nominee_Phone, Overview_ans: Overview_ans, links_ans:links_ans, videos_ans:videos_ans, speak_style_ans:speak_style_ans })
 							.done(function( data ) {
 								$('#wizard2').fadeOut(300, function() {
-									$('#wizard-success').fadeIn(300);
+									$('#wizard-success2').fadeIn(300);
 								});
 								
 								if (typeof(Storage) != "undefined") {
@@ -214,7 +214,7 @@ $(function ()
 							}) 
 							.fail(function() {
 								$('#wizard2').fadeOut(300, function() {
-									$('#wizard-unsuccess').fadeIn(300);
+									$('#wizard-unsuccess2').fadeIn(300);
 								});
 							});
 							
