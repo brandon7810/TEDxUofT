@@ -260,7 +260,7 @@ var is_finished = false;
 			
 			if(year.length == 0){
 				$('#Year').css('border-bottom','1px solid #FF2B06');
-			return false;
+				return false;
 			} else if (title.length == 0){
 				$('#Title').css('border-bottom','1px solid #FF2B06');
 			}else if (occupation.length == 0){
