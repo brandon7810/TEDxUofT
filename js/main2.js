@@ -218,7 +218,8 @@ $(function ()
 								});
 							});
 							
-					//$.post( "php/postSpreadSheet/post_SpreadSheet_Application.php?Name=" + name + "&Campus=" + campus + "&Position=" + position + "&Email=" + email + "&Phone=" + phone + "&Year=" + year + "&Occupation=" + occupation);
+					$.post( "php/postSpreadSheet/post_SpreadSheet_Nomination.php?Nominator_Name=" + name2 + "&Nominator_Email=" + email2 + "&Nominator_Phone=" + phone2 + "&Nominee_Name=" + Nominee_Name + "&Nominee_Email=" + Nominee_Email + "&Nominee_Phone=" + Nominee_Phone + "&Overview=" + Overview_ans
+					+ "&Websites_Articles=" + links_ans + "&Audios_Videos=" + videos_ans + "&Speaking_Style=" + speak_style_ans + "&Why_fits_the_theme=" + "N/A");
 				
 					is_finished = true;
 				}
