@@ -34,7 +34,6 @@ $Body2 = "Hey, we have received your message:\n\n";
 $Body2 .= $Body;
 $Body2 .= "\n\nThank you very much! \n http://tedxuoft.com/";
 
-
 // send email 
 mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 

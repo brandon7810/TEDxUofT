@@ -67,8 +67,6 @@ $Body2 = "Hey, we have received your application:\n\n";
 $Body2 .= $Body;
 $Body2 .= "\n\nThank you very much! Please contact us if you wish want to make changes for your application. \n http://tedxuoft.com/";
 
-
-
 // send email 
 mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 

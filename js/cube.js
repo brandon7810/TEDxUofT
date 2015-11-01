@@ -1,12 +1,8 @@
 var container;
 var camera,scene,renderer;
-
 var checker = 1;
-
 var counter = 0;
 var formation = ["mix","line","circle","cube","spiral"]
-
-
 
 init();
 animate();

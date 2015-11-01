@@ -1,64 +1,96 @@
 $(function ()
 { 
 
-  var name, email, phone, occupation, party_ticket, campus, message, additional_info, dietary_res;
+  var name = '',
+      email = '',
+      phone = '',
+      occupation = '',
+      party_ticket = '',
+      campus = '',
+      message = '',
+      additional_info = '',
+      dietary_res = '';
 
   $("#wizard").steps({
     headerTag: "h2",
     bodyTag: "section",
     transitionEffect: "slideLeft",
 
-
       //Events happen in different step
-      onStepChanging: function (event, currentIndex, priorIndex) { 
+      onStepChanging: function (event, currentIndex, priorIndex) {
+
+        var apply_name_input = $('#applyName');
+        var apply_email_input = $('#applyEmail');
+        var apply_phone_input = $('#Phone');
+        var apply_occupation_input = $('#Occupation');
+        var apply_message_input = $('#applyMessage');
+
         var newIndex = priorIndex;
 
         //Finishing First step
         if(newIndex == 1){
-          name = $('#applyName').val();
-          email = $('#applyEmail').val();
-          phone = $('#Phone').val();
+
+          name = apply_name_input.val();
+          email = apply_email_input.val();
+          phone = apply_phone_input.val();
+
           if(name.length == 0){
-            $('#applyName').css('border-bottom','1px solid #FF2B06');
+
+            apply_name_input.css('border-bottom','1px solid #FF2B06');
             return false;
+
           } else if (email.length == 0){
-            $('#applyEmail').css('border-bottom','1px solid #FF2B06');
+
+            apply_email_input.css('border-bottom','1px solid #FF2B06');
+
           } else {
+
             return true;
           }
-          
-        //Finishing Second step
-      }else if(newIndex == 2){	
-        occupation = $('#Occupation').val();
 
-        if(occupation.length == 0){
-          $('#Occupation').css('border-bottom','1px solid #FF2B06');
-          return false;
-        }else{
-          return true;
-        }
+        //Finishing Second step
+        }else if(newIndex == 2){
+
+          occupation = apply_occupation_input.val();
+
+          if(occupation.length == 0){
+
+            apply_occupation_input.css('border-bottom','1px solid #FF2B06');
+            return false;
+
+          }else{
+
+            return true;
+          }
 
         //Finishing Third step
-      }else if(newIndex == 3){
-        message = $('#applyMessage').val();
+        }else if(newIndex == 3){
 
-        if (message.length == 0){
-          $('#applyMessage').css('border','1px solid #FF2B06');
-          return false;
+          message = apply_message_input.val();
+
+          if (message.length == 0){
+
+            apply_message_input.css('border','1px solid #FF2B06');
+            return false;
+
+          }else{
+
+            return true;
+          }
+
+        //Finishing Fourth step
+        }else if(newIndex == 4){
+
+          dietary_res = $('#Dietary_res').val();
+          additional_info = $('#additional_info').val();
+          return true;
+
         }else{
+
           return true;
         }
-        
-        //Finishing Fourth step
-      }else if(newIndex == 4){
-        dietary_res = $('#Dietary_res').val();
-        additional_info = $('#additional_info').val();
-        return true;
-      }else{
-        return true;
-      }
+      },
 
-    },      
       //Event happens after finishing all the steps
       onFinished: function (event, currentIndex) {	
 
@@ -74,8 +106,8 @@ $(function ()
 				$('#wizard').fadeOut(300, function() {
 				$('#wizard-success').fadeIn(300);
 				});
-			});
-
+			}
+        );
       },
 
 	  //Event happens before finishing all the steps
@@ -90,125 +122,168 @@ $(function ()
 			  return true;
 			}
 		}*/
-	}
-});
+	  }
+    }
+  );
 
+  (function(){
+    var max_count = 200;
+  
+    $("#applyMessage").on('keyup', function() {
 
-var max_count = 200;
-var wordCounts = {};
+      var words = this.value.match(/\S+/g).length;
 
-$("#applyMessage").on('keyup', function() {
-  var words = this.value.match(/\S+/g).length;
-  if (words > max_count) {
-	  // Split the string on first 200 words and rejoin on spaces
-	  var trimmed = $(this).val().split(/\s+/, max_count).join(" ");
-	  // Add a space at the end to keep new typing making new words
-	  $(this).val(trimmed + " ");
-  }
-  else {
-    $('#count_left').html(max_count-words);
-  }
-});	
+      if (words > max_count) {
 
-var utm_bool = false;
-var utsc_bool = false;
-var utsg_bool = false;
-var other_bool = false;
-$("#campus_utm").click(function(event) {
-  campus = "UTM";
-  utm_bool = true;
-  $("#campus_utm").css('background','#FF2B06');
-  $("#campus_utm").css('color','white');
-  utsc_bool = false;
-  $("#campus_utsg").css('background','white');
-  $("#campus_utsg").css('color','#FF2B06');
-  utsg_bool = false;
-  $("#campus_utsc").css('background','white');
-  $("#campus_utsc").css('color','#FF2B06');
-  other_bool = false;
-  $("#campus_other").css('background','white');
-  $("#campus_other").css('color','#FF2B06');
-});
-$("#campus_utsg").click(function(event) {
-  campus = "UTSG";
-  utm_bool = false;
-  $("#campus_utm").css('background','white');
-  $("#campus_utm").css('color','#FF2B06');
-  utsc_bool = false;
-  $("#campus_utsc").css('background','white');
-  $("#campus_utsc").css('color','#FF2B06');
-  utsg_bool = true;
-  $("#campus_utsg").css('background','#FF2B06');
-  $("#campus_utsg").css('color','white');
-  other_bool = false;
-  $("#campus_other").css('background','white');
-  $("#campus_other").css('color','#FF2B06');
-});
-$("#campus_utsc").click(function(event) {
-  campus = "UTSC";
-  utm_bool = false;
-  $("#campus_utm").css('background','white');
-  $("#campus_utm").css('color','#FF2B06');
-  utsc_bool = true;
-  $("#campus_utsc").css('background','#FF2B06');
-  $("#campus_utsc").css('color','white');
-  utsg_bool = false;
-  $("#campus_utsg").css('background','white');
-  $("#campus_utsg").css('color','#FF2B06');
-  other_bool = false;
-  $("#campus_other").css('background','white');
-  $("#campus_other").css('color','#FF2B06');
-});
-$("#campus_other").click(function(event) {
-  campus = "Other";
-  utm_bool = false;
-  $("#campus_utm").css('background','white');
-  $("#campus_utm").css('color','#FF2B06');
-  utsc_bool = false;
-  $("#campus_utsg").css('background','white');
-  $("#campus_utsg").css('color','#FF2B06');
-  utsg_bool = false;
-  $("#campus_utsc").css('background','white');
-  $("#campus_utsc").css('color','#FF2B06');
-  other_bool = true;
-  $("#campus_other").css('background','#FF2B06');
-  $("#campus_other").css('color','white');
-});
+        // Split the string on first 200 words and rejoin on spaces
+        var trimmed = $(this).val().split(/\s+/, max_count).join(" ");
+        // Add a space at the end to keep new typing making new words
+        $(this).val(trimmed + " ");
+      }
 
-var afterparty_yes_bool = false;
-var afterparty_no_bool = false;
-$("#afterparty_yes").click(function(event) {
-  party_ticket = "YES";
-  afterparty_yes_bool = true;
-  $("#afterparty_yes").css('background','#FF2B06');
-  $("#afterparty_yes").css('color','white');
-  afterparty_no_bool = false;
-  $("#afterparty_no").css('color','#FF2B06');
-  $("#afterparty_no").css('background','white');
-});
-$("#afterparty_no").click(function(event) {
-  party_ticket = "NO";
-  afterparty_no_bool = true;
-  $("#afterparty_no").css('background','#FF2B06');
-  $("#afterparty_no").css('color','white');
-  afterparty_yes_bool = false;
-  $("#afterparty_yes").css('color','#FF2B06');
-  $("#afterparty_yes").css('background','white');
-});
+      else {
 
+        $('#count_left').html(max_count-words);
+      }
+    });
+  })();
+
+  (function(){
+    var utm_bool = false;
+    var utsc_bool = false;
+    var utsg_bool = false;
+    var other_bool = false;
+
+    var campus_utm_div = $("#campus_utm");
+    var campus_utsg_div = $("#campus_utsg");
+    var campus_utsc_div = $("#campus_utsc");
+    var campus_other_div = $("#campus_other");
+    var after_party_yes_div = $("#afterparty_yes");
+    var after_party_no_div = $("#afterparty_no");
+
+    campus_utm_div.click(function() {
+
+      campus = "UTM";
+      utm_bool = true;
+      utsc_bool = false;
+      utsg_bool = false;
+      other_bool = false;
+
+      campus_utm_div.css('background','#FF2B06');
+      campus_utm_div.css('color','white');
+      campus_utsg_div.css('background','white');
+      campus_utsg_div.css('color','#FF2B06');
+      campus_utsc_div.css('background','white');
+      campus_utsc_div.css('color','#FF2B06');
+      campus_other_div.css('background','white');
+      campus_other_div.css('color','#FF2B06');
+    });
+
+    campus_utsg_div.click(function() {
+
+      campus = "UTSG";
+      utm_bool = false;
+      utsc_bool = false;
+      utsg_bool = true;
+      other_bool = false;
+
+      campus_utm_div.css('background','white');
+      campus_utm_div.css('color','#FF2B06');
+      campus_utsc_div.css('background','white');
+      campus_utsc_div.css('color','#FF2B06');
+      campus_utsg_div.css('background','#FF2B06');
+      campus_utsg_div.css('color','white');
+      campus_other_div.css('background','white');
+      campus_other_div.css('color','#FF2B06');
+    });
+
+    campus_utsc_div.click(function() {
+
+      campus = "UTSC";
+      utm_bool = false;
+      utsc_bool = true;
+      utsg_bool = false;
+      other_bool = false;
+
+      campus_utm_div.css('background','white');
+      campus_utm_div.css('color','#FF2B06');
+      campus_utsc_div.css('background','#FF2B06');
+      campus_utsc_div.css('color','white');
+      campus_utsg_div.css('background','white');
+      campus_utsg_div.css('color','#FF2B06');
+      campus_other_div.css('background','white');
+      campus_other_div.css('color','#FF2B06');
+    });
+
+    campus_other_div.click(function() {
+
+      campus = "Other";
+      utm_bool = false;
+      utsc_bool = false;
+      utsg_bool = false;
+      other_bool = true;
+
+      campus_utm_div.css('background','white');
+      campus_utm_div.css('color','#FF2B06');
+      campus_utsg_div.css('background','white');
+      campus_utsg_div.css('color','#FF2B06');
+      campus_utsc_div.css('background','white');
+      campus_utsc_div.css('color','#FF2B06');
+      campus_other_div.css('background','#FF2B06');
+      campus_other_div.css('color','white');
+    });
+
+    var after_party_yes_bool = false;
+    var after_party_no_bool = false;
+
+    after_party_yes_div.click(function() {
+
+      party_ticket = "YES";
+      after_party_yes_bool = true;
+      after_party_no_bool = false;
+
+      after_party_yes_div.css('background','#FF2B06');
+      after_party_yes_div.css('color','white');
+      after_party_no_div.css('color','#FF2B06');
+      after_party_no_div.css('background','white');
+    });
+
+    after_party_no_div.click(function() {
+
+      party_ticket = "NO";
+      after_party_no_bool = true;
+      after_party_yes_bool = false;
+
+      after_party_no_div.css('background','#FF2B06');
+      after_party_no_div.css('color','white');
+      after_party_yes_div.css('color','#FF2B06');
+      after_party_yes_div.css('background','white');
+    });
+  })();
 });
 
 $('#ContactSubmit').click(function(){
-  var name = $('#Name').val();
-  var email = $('#Email').val();
-  var message = $('#Message').val();
+
+  var name_input = $('#contactName');
+  var email_input = $('#contactEmail');
+  var message_input = $('#contactMessage');
+
+  var name = name_input.val();
+  var email = email_input.val();
+  var message = message_input.val();
   
   if( name.length==0){
-    $('#Name').css('border-bottom','1px solid #FF2B06');
+
+    name_input.css('border-bottom','1px solid #FF2B06');
+
   }else if (email.indexOf("@") == -1 || email.length == 0){
-    $('#Email').css('border-bottom','1px solid #FF2B06');
+
+    email_input.css('border-bottom','1px solid #FF2B06');
+
   }else if (message.length <= 5){
-    $('#Message').css('border-bottom','1px solid #FF2B06');
+
+    message_input.css('border-bottom','1px solid #FF2B06');
+
   }else{
   
 	/*
@@ -217,7 +292,6 @@ $('#ContactSubmit').click(function(){
 		$('#contact-area').fadeOut(300, function() {
       $('#contact-success').fadeIn(300);
     });
-	
 	*/
 	
 	$.post( "php/contactengine.php", { Name: name, Email: email, Message: message })
@@ -229,11 +303,10 @@ $('#ContactSubmit').click(function(){
  }
 });
 
-
 $(function() {
 
 	$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+
 		hoverDelay : 75
 	}); } );
-
 });
