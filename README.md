@@ -1,4 +1,4 @@
 TEDxUofT
 ========
 
-Official TEDxUofT 2014 experimental site
+TEDxUofT 2014 site
